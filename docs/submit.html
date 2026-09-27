@@ -1,15 +1,69 @@
----
-layout: default
-title: Suggest an Item
-hero: Suggest an item for the newsletter
-nav: submit
-description: Suggest a paper, talk or podcast for the AI and Surgery Interest Group newsletter.
----
-<div class="card">
-  <section id="formwrap">
-    <p class="intro">Found a paper, talk, podcast or tool that surgeons should know about? Send the link and a few lines on why it matters. Every suggestion is reviewed before it runs, and you're credited by name if it's included.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggest an Item | AI and Surgery Interest Group</title>
+<meta name="description" content="Suggest a paper, talk or podcast for the AI and Surgery Interest Group newsletter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #14213d; --muted: #5b6475; --line: #dde1e8;
+    --accent: #002d72; --accent-ink: #ffffff; --ok: #1f7a4d; --err: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1320; --card: #161d2e; --ink: #e8ecf4; --muted: #a2abbd; --line: #2a3347;
+      --accent: #6f9bff; --accent-ink: #0e1320; --ok: #5fd39a; --err: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 16px;
+  }
+  main { width: 100%; max-width: 560px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 36px 32px 28px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+  h1 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1.15; margin: 0 0 14px; }
+  p { margin: 0 0 14px; color: var(--muted); }
+  form { display: grid; gap: 14px; margin-top: 8px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
+  .opt { color: var(--muted); font-weight: 400; }
+  input, textarea {
+    font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+    border-radius: 8px; padding: 11px 12px; width: 100%;
+  }
+  textarea { min-height: 120px; resize: vertical; }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+  .count { font-size: 12px; color: var(--muted); font-weight: 400; justify-self: end; }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; color: var(--ink); }
+  .check input { width: auto; margin-top: 4px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  button { font: inherit; font-weight: 600; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 12px 16px; cursor: pointer; margin-top: 4px; }
+  button[disabled] { opacity: .6; cursor: default; }
+  .msg { font-size: 14px; margin: 4px 0 0; min-height: 1.4em; }
+  .msg.err { color: var(--err); }
+  .done { display: none; }
+  .done h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 24px; margin: 0 0 10px; }
+  .link { color: var(--accent); font-weight: 500; }
+  .fine { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 24px; padding-top: 16px; }
+  .fine p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">AI and Surgery Interest Group</p>
+  <h1>Suggest an item for the newsletter</h1>
 
-    <form id="submit" novalidate style="margin-top:18px">
+  <section id="formwrap">
+    <p>Found a paper, talk, podcast or tool that surgeons should know about? Send the link and a few lines on why it matters. Every suggestion is reviewed before it runs, and we credit you by name if it's included.</p>
+
+    <form id="submit" novalidate>
       <div class="row">
         <label>Your name
           <input name="name" autocomplete="name" required maxlength="120">
@@ -40,14 +94,14 @@ description: Suggest a paper, talk or podcast for the AI and Surgery Interest Gr
   <section class="done" id="done">
     <h2>Thanks, got it.</h2>
     <p>Your suggestion is in the review queue. If it's selected, it will appear in an upcoming issue.</p>
-    <p><a href="submit.html">Suggest another</a></p>
+    <p><a class="link" href="submit.html">Suggest another</a></p>
   </section>
-</div>
 
-<div class="fine">
-  <p>Please don't include patient information. Links to published or public material only.</p>
-  <p>Not on the list yet? <a href="./">Join the AI and Surgery Interest Group</a>.</p>
-</div>
+  <div class="fine">
+    <p>Please don't include patient information. Links to published or public material only.</p>
+    <p>Not on the list yet? <a class="link" href="./">Join the AI and Surgery Interest Group</a>.</p>
+  </div>
+</main>
 
 <script>
   const ENDPOINT = "https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec";
@@ -60,6 +114,7 @@ description: Suggest a paper, talk or podcast for the AI and Surgery Interest Gr
   const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   const urlRe = /^https?:\/\/\S+\.\S+/i;
 
+  // Prefill from ?name=&email=&url= so links from emails can carry details.
   const qs = new URLSearchParams(location.search);
   ["name", "email", "url"].forEach(k => { if (qs.get(k)) form.elements[k].value = qs.get(k); });
 
@@ -96,3 +151,5 @@ description: Suggest a paper, talk or podcast for the AI and Surgery Interest Gr
     }
   });
 </script>
+</body>
+</html>

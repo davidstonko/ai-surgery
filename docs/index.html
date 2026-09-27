@@ -1,18 +1,121 @@
----
-layout: default
-title: AI and Surgery Interest Group
-hero: AI and Surgery Interest Group
-kicker: Join the group
-nav: join
-description: Join the AI and Surgery Interest Group at the Johns Hopkins Department of Surgery.
----
-<div class="card">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI and Surgery Interest Group</title>
+<meta name="description" content="Join the AI and Surgery Interest Group at the Johns Hopkins Department of Surgery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --ink: #14213d;
+    --muted: #5b6475;
+    --line: #dde1e8;
+    --accent: #002d72;
+    --accent-ink: #ffffff;
+    --ok: #1f7a4d;
+    --err: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1320;
+      --card: #161d2e;
+      --ink: #e8ecf4;
+      --muted: #a2abbd;
+      --line: #2a3347;
+      --accent: #6f9bff;
+      --accent-ink: #0e1320;
+      --ok: #5fd39a;
+      --err: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  main {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 36px 32px 28px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  p { margin: 0 0 14px; color: var(--muted); }
+  ul { margin: 0 0 24px; padding-left: 20px; color: var(--muted); }
+  li { margin: 4px 0; }
+  form { display: grid; gap: 14px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
+  .opt { color: var(--muted); font-weight: 400; }
+  input, select {
+    font: inherit;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 11px 12px;
+    width: 100%;
+  }
+  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  button {
+    font: inherit;
+    font-weight: 600;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  button[disabled] { opacity: .6; cursor: default; }
+  .msg { font-size: 14px; margin: 4px 0 0; min-height: 1.4em; }
+  .msg.ok { color: var(--ok); }
+  .msg.err { color: var(--err); }
+  .done { display: none; }
+  .done h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 24px; margin: 0 0 10px; }
+  .fine { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 24px; padding-top: 16px; }
+  .fine p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Johns Hopkins Department of Surgery</p>
+  <h1>AI and Surgery Interest Group</h1>
+
   <section id="join">
-    <p class="intro">A group for surgeons, trainees, scientists and engineers working on, or curious about, how AI is changing surgical care.</p>
-    <ul class="perks">
+    <p>A group for surgeons, trainees, scientists and engineers working on, or curious about, how AI is changing surgical care.</p>
+    <ul>
       <li>A short weekly email with papers, talks and podcasts worth your time</li>
       <li>Notice of meetings, speakers and collaborations</li>
-      <li>A <a href="submit.html">way to suggest items</a> yourself, credited to you if they run</li>
     </ul>
 
     <form id="signup" novalidate>
@@ -46,15 +149,18 @@ description: Join the AI and Surgery Interest Group at the Johns Hopkins Departm
   <section class="done" id="done">
     <h2>You're on the list.</h2>
     <p>You'll receive a welcome email shortly. If it doesn't arrive in a few days, check your spam folder.</p>
-    <p><a href="library/">Browse the library</a> while you wait.</p>
   </section>
-</div>
 
-<div class="fine">
-  <p>Your email is used only for group messages and is never shared. Every email includes an unsubscribe link.</p>
-</div>
+  <div class="fine">
+    <p>Seen something the group should know about? <a href="submit.html" style="color:var(--accent);font-weight:500">Suggest it for the newsletter</a>.</p>
+    <p>Your email is used only for group messages and is never shared. Every email includes an unsubscribe link.</p>
+    <p><a href="library/" style="color:var(--accent);font-weight:500">Library</a> &middot; <a href="resources/" style="color:var(--accent);font-weight:500">Resources</a></p>
+    <p>Organized by David P. Stonko, MD, MS.</p>
+  </div>
+</main>
 
 <script>
+  // Paste the Apps Script web app URL here after deploying (see README).
   const ENDPOINT = "https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec";
 
   const form = document.getElementById("signup");
@@ -71,6 +177,7 @@ description: Join the AI and Surgery Interest Group at the Johns Hopkins Departm
     const email = (data.get("email") || "").trim();
     if (!name) return show("Please enter your name.", "err");
     if (!emailRe.test(email)) return show("Please enter a valid email address.", "err");
+    if (!ENDPOINT) return show("Sign-up isn't open yet. Please try again soon.", "err");
 
     btn.disabled = true;
     show("Adding you to the list...");
@@ -90,3 +197,5 @@ description: Join the AI and Surgery Interest Group at the Johns Hopkins Departm
     }
   });
 </script>
+</body>
+</html>

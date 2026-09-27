@@ -2,10 +2,13 @@
 layout: default
 title: Resources
 nav: resources
-dek: The links worth keeping close.
 description: Johns Hopkins AI tools and policies, and where to start reading on AI in surgery.
 ---
-<div class="card prose" markdown="1">
+# Resources
+
+<p class="lede">The links worth keeping close.</p>
+
+<div class="prose" markdown="1">
 
 ## The group
 
