@@ -1,0 +1,31 @@
+---
+layout: default
+title: Library
+nav: library
+description: Posts, reading lists and resources from the AI and Surgery Interest Group at the Johns Hopkins Department of Surgery.
+---
+<h1>Library</h1>
+<p class="lede">Reading lists, talk resources and notes on AI in surgical care, from the Johns Hopkins Department of Surgery.</p>
+
+<h2 class="section-title">Posts</h2>
+<ul class="list">
+{% for post in site.posts %}
+  <li>
+    <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.dek | default: post.excerpt | strip_html | truncate: 200 }}</p>
+  </li>
+{% endfor %}
+</ul>
+
+<h2 class="section-title">Also here</h2>
+<ul class="list">
+  <li>
+    <h2><a href="{{ '/resources/' | relative_url }}">Resources</a></h2>
+    <p>Hopkins AI tools and policies, and where to start reading.</p>
+  </li>
+  <li>
+    <h2><a href="{{ '/submit.html' | relative_url }}">Suggest an item</a></h2>
+    <p>Send a paper, talk or podcast for the weekly newsletter. Credited to you if it runs.</p>
+  </li>
+</ul>
