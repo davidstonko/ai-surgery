@@ -46,6 +46,9 @@ Open `docs/index.html`, find `const ENDPOINT = "";` and paste the URL between th
 ## Updating the backend later
 Edit the code in Apps Script, then Deploy > Manage deployments > edit (pencil) > Version: New version > Deploy. This keeps the same URL, so the page does not need to change.
 
+## Welcome email
+Each new sign-up gets a welcome email from the Google account that owns the script, shown as "AI in Surgery Interest Group", with replies going to dstonko1@jh.edu. It includes a personal unsubscribe link. Turn it off with `SEND_WELCOME = false`. Personal Gmail accounts can send about 100 script emails a day, which is plenty for sign-ups.
+
 ## Unsubscribe links
 Each future email should carry a personal link:
 `<WEB_APP_URL>?action=unsubscribe&e=<email>&t=<token>`, where the token comes from `unsubToken(email)` in the script. Clicking it marks the row `unsubscribed`. The weekly send step will generate these automatically.

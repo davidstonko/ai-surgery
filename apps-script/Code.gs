@@ -12,6 +12,11 @@ const HEADERS = ['timestamp', 'name', 'email', 'role', 'status', 'source'];
 // Set to your email to get a note for each new sign-up, or leave '' for none.
 const NOTIFY_EMAIL = '';
 
+// Welcome email sent to each new subscriber (from this Google account, replies go to REPLY_TO).
+const SEND_WELCOME = true;
+const FROM_NAME = 'AI in Surgery Interest Group';
+const REPLY_TO = 'dstonko1@jh.edu';
+
 function sheet_() {
   const sh = SpreadsheetApp.openById(SHEET_ID).getSheets()[0];
   const first = sh.getRange(1, 1, 1, HEADERS.length).getValues()[0];
@@ -66,11 +71,45 @@ function doPost(e) {
     lock.releaseLock();
   }
 
+  if (SEND_WELCOME) {
+    try { sendWelcome_(name, email); } catch (err) { console.error('welcome failed: ' + err); }
+  }
+
   if (NOTIFY_EMAIL) {
     MailApp.sendEmail(NOTIFY_EMAIL, 'New AI in Surgery sign-up: ' + name,
       name + ' <' + email + '>' + (role ? '\n' + role : ''));
   }
   return json_({ ok: true });
+}
+
+function unsubLink_(email) {
+  return ScriptApp.getService().getUrl() + '?action=unsubscribe&e=' +
+    encodeURIComponent(email) + '&t=' + unsubToken(email);
+}
+
+function sendWelcome_(name, email) {
+  const first = String(name).split(/\s+/)[0];
+  const firstHtml = first.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const unsub = unsubLink_(email);
+  const text =
+    'Hi ' + first + ',\n\n' +
+    'Thanks for joining the AI in Surgery Interest Group at the Johns Hopkins Department of Surgery.\n\n' +
+    'What to expect: a short weekly email with the papers, talks and podcasts worth a surgeon\'s time, each with a note on why it matters, plus notice of meetings and speakers.\n\n' +
+    'Have something the group should see, or want to be involved? Just reply to this email.\n\n' +
+    'David\n' +
+    'David P. Stonko, MD, MS\nJohns Hopkins Department of Surgery\n\n' +
+    'Unsubscribe: ' + unsub;
+  const html =
+    '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1a1a1a;max-width:560px">' +
+    '<p>Hi ' + firstHtml + ',</p>' +
+    '<p>Thanks for joining the <b>AI in Surgery Interest Group</b> at the Johns Hopkins Department of Surgery.</p>' +
+    '<p>What to expect: a short weekly email with the papers, talks and podcasts worth a surgeon\'s time, each with a note on why it matters, plus notice of meetings and speakers.</p>' +
+    '<p>Have something the group should see, or want to be involved? Just reply to this email.</p>' +
+    '<p>David<br>David P. Stonko, MD, MS<br>Johns Hopkins Department of Surgery</p>' +
+    '<p style="font-size:12px;color:#777;margin-top:28px">You signed up at the group\'s sign-up page. ' +
+    '<a href="' + unsub + '" style="color:#777">Unsubscribe</a></p></div>';
+  MailApp.sendEmail({ to: email, subject: 'Welcome to the AI in Surgery Interest Group',
+    body: text, htmlBody: html, name: FROM_NAME, replyTo: REPLY_TO });
 }
 
 /* ---------- Unsubscribe ----------
