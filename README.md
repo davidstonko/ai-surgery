@@ -14,7 +14,7 @@ Invite email (jh.edu)  ->  Sign-up page (GitHub Pages, docs/)
                        Google Sheet: "AI in Surgery Interest Group - Subscribers"
                               |
                               v
-                       Weekly newsletter + Slack invites (phase 2)
+                       Weekly newsletter (phase 2)
 ```
 
 Subscriber sheet: https://docs.google.com/spreadsheets/d/1kvLyBEirpn_iE6m5rARXXOagX5y5vR1Fzg_xEaNAh1w/edit
@@ -51,4 +51,4 @@ Each future email should carry a personal link:
 `<WEB_APP_URL>?action=unsubscribe&e=<email>&t=<token>`, where the token comes from `unsubToken(email)` in the script. Clicking it marks the row `unsubscribed`. The weekly send step will generate these automatically.
 
 ## Rules for the group
-- Nothing containing patient information goes into the sign-up form, the sheet, the newsletter pipeline or Slack.
+- Nothing containing patient information goes into the sign-up form, the sheet, or the newsletter pipeline.

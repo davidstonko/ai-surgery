@@ -7,7 +7,6 @@ I'm starting an AI in Surgery Interest Group in the Department of Surgery. The g
 Here is how it will work:
 
 - A short weekly email with the papers, talks and podcasts I think are worth your time, with a few notes on each
-- A Slack channel for discussion, questions and finding collaborators
 - Occasional meetings and invited speakers
 
 If you're interested, add your name and preferred email here (any address works, Hopkins or not):
