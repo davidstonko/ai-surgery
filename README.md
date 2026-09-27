@@ -37,7 +37,7 @@ Open `docs/index.html`, find `const ENDPOINT = "";` and paste the URL between th
 1. Create a new public repo on GitHub, for example `ai-surgery`.
 2. Push this folder to it.
 3. Repo Settings > Pages > Build and deployment > Deploy from a branch > `main` / `/docs` > Save.
-4. After a minute the site is live at `https://<github-username>.github.io/ai-surgery/`.
+4. After a minute the site is live at `https://davidstonko.github.io/ai-surgery/`.
 
 ### 4. Test, then send the invite
 1. Open the live page, sign up with your own email, confirm a row appears in the sheet.

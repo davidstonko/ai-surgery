@@ -11,7 +11,7 @@ Here is how it will work:
 
 If you're interested, add your name and preferred email here (any address works, Hopkins or not):
 
-[SIGN-UP LINK]?src=invite
+https://davidstonko.github.io/ai-surgery/?src=invite
 
 Please forward this to anyone who would want to be involved, inside or outside the department.
 
