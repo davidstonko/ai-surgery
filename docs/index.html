@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in Surgery Interest Group</title>
+<meta name="description" content="Join the AI in Surgery Interest Group at the Johns Hopkins Department of Surgery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --ink: #14213d;
+    --muted: #5b6475;
+    --line: #dde1e8;
+    --accent: #002d72;
+    --accent-ink: #ffffff;
+    --ok: #1f7a4d;
+    --err: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1320;
+      --card: #161d2e;
+      --ink: #e8ecf4;
+      --muted: #a2abbd;
+      --line: #2a3347;
+      --accent: #6f9bff;
+      --accent-ink: #0e1320;
+      --ok: #5fd39a;
+      --err: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  main {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 36px 32px 28px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.15;
+    margin: 0 0 14px;
+  }
+  p { margin: 0 0 14px; color: var(--muted); }
+  ul { margin: 0 0 24px; padding-left: 20px; color: var(--muted); }
+  li { margin: 4px 0; }
+  form { display: grid; gap: 14px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
+  .opt { color: var(--muted); font-weight: 400; }
+  input, select {
+    font: inherit;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 11px 12px;
+    width: 100%;
+  }
+  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  button {
+    font: inherit;
+    font-weight: 600;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  button[disabled] { opacity: .6; cursor: default; }
+  .msg { font-size: 14px; margin: 4px 0 0; min-height: 1.4em; }
+  .msg.ok { color: var(--ok); }
+  .msg.err { color: var(--err); }
+  .done { display: none; }
+  .done h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 24px; margin: 0 0 10px; }
+  .fine { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 24px; padding-top: 16px; }
+  .fine p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Johns Hopkins Department of Surgery</p>
+  <h1>AI in Surgery Interest Group</h1>
+
+  <section id="join">
+    <p>A group for surgeons, trainees, scientists and engineers working on, or curious about, how AI is changing surgical care.</p>
+    <ul>
+      <li>A short weekly email with papers, talks and podcasts worth your time</li>
+      <li>An invitation to the group Slack</li>
+      <li>Notice of meetings, speakers and collaborations</li>
+    </ul>
+
+    <form id="signup" novalidate>
+      <label>Name
+        <input name="name" autocomplete="name" required maxlength="120">
+      </label>
+      <label>Email for group messages
+        <input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="Any address, Hopkins or not">
+      </label>
+      <label><span>Role <span class="opt">(optional)</span></span>
+        <select name="role">
+          <option value="">Select</option>
+          <option>Attending surgeon</option>
+          <option>Resident or fellow</option>
+          <option>Medical student</option>
+          <option>Researcher or data scientist</option>
+          <option>Engineer</option>
+          <option>Nurse, APP or other clinician</option>
+          <option>Industry</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <div class="hp" aria-hidden="true">
+        <label>Website <input name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <button type="submit" id="btn">Join the list</button>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="done" id="done">
+    <h2>You're on the list.</h2>
+    <p>Watch for a welcome email with the Slack invite. If it doesn't arrive in a few days, check your spam folder.</p>
+  </section>
+
+  <div class="fine">
+    <p>Your email is used only for group messages and is never shared. Every email includes an unsubscribe link.</p>
+    <p>Organized by David P. Stonko, MD, MS.</p>
+  </div>
+</main>
+
+<script>
+  // Paste the Apps Script web app URL here after deploying (see README).
+  const ENDPOINT = "";
+
+  const form = document.getElementById("signup");
+  const msg = document.getElementById("msg");
+  const btn = document.getElementById("btn");
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function show(text, cls) { msg.textContent = text; msg.className = "msg " + (cls || ""); }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = (data.get("name") || "").trim();
+    const email = (data.get("email") || "").trim();
+    if (!name) return show("Please enter your name.", "err");
+    if (!emailRe.test(email)) return show("Please enter a valid email address.", "err");
+    if (!ENDPOINT) return show("Sign-up isn't open yet. Please try again soon.", "err");
+
+    btn.disabled = true;
+    show("Adding you to the list...");
+    const body = new URLSearchParams({
+      name, email,
+      role: data.get("role") || "",
+      website: data.get("website") || "",
+      source: new URLSearchParams(location.search).get("src") || "web"
+    });
+    try {
+      await fetch(ENDPOINT, { method: "POST", mode: "no-cors", body });
+      document.getElementById("join").style.display = "none";
+      document.getElementById("done").style.display = "block";
+    } catch (err) {
+      btn.disabled = false;
+      show("Something went wrong. Please try again.", "err");
+    }
+  });
+</script>
+</body>
+</html>
