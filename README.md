@@ -1,6 +1,6 @@
-# AI in Surgery Interest Group
+# AI and Surgery Interest Group
 
-Sign-up site and tooling for the AI in Surgery Interest Group, Johns Hopkins Department of Surgery.
+Sign-up site and tooling for the AI and Surgery Interest Group, Johns Hopkins Department of Surgery.
 
 ## How it fits together
 
@@ -11,7 +11,7 @@ Invite email (jh.edu)  ->  Sign-up page (GitHub Pages, docs/)
                        Apps Script web app (apps-script/Code.gs)
                               |
                               v
-                       Google Sheet: "AI in Surgery Interest Group - Subscribers"
+                       Google Sheet: "AI and Surgery Interest Group - Subscribers"
                               |
                               v
                        Weekly newsletter (phase 2)
@@ -46,8 +46,11 @@ Open `docs/index.html`, find `const ENDPOINT = "";` and paste the URL between th
 ## Updating the backend later
 Edit the code in Apps Script, then Deploy > Manage deployments > edit (pencil) > Version: New version > Deploy. This keeps the same URL, so the page does not need to change.
 
+## Newsletter suggestions
+Anyone can suggest an item at `docs/submit.html` (https://davidstonko.github.io/ai-surgery/submit.html): name, optional email, link, blurb, and whether to credit them by name. Each one lands in the Submissions Sheet (`AI and Surgery Interest Group - Submissions`) as `pending`, and a review email goes to dstonko1@jh.edu. Its Review button opens a page with Approve and Reject buttons. Opening the link alone changes nothing, so email link scanners can't approve anything. Approved items with credit = yes run in the next issue as "Suggested by Name". If the person left an email, they get a thank-you once the item is approved.
+
 ## Welcome email
-Each new sign-up gets a welcome email from the Google account that owns the script, shown as "AI in Surgery Interest Group", with replies going to dstonko1@jh.edu. It includes a personal unsubscribe link. Turn it off with `SEND_WELCOME = false`. Personal Gmail accounts can send about 100 script emails a day, which is plenty for sign-ups.
+Each new sign-up gets a welcome email from the Google account that owns the script, shown as "AI and Surgery Interest Group", with replies going to dstonko1@jh.edu. It includes a personal unsubscribe link. Turn it off with `SEND_WELCOME = false`. Personal Gmail accounts can send about 100 script emails a day, which is plenty for sign-ups.
 
 ## Unsubscribe links
 Each future email should carry a personal link:
