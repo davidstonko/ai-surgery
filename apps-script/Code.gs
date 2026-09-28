@@ -316,7 +316,7 @@ function sendWelcome_(name, email, hasLatest) {
     'and medicine: a feature, the week\'s news, and something to watch or listen to. ' + latestLine + '\n\n' +
     'Seen something that belongs in it? Suggest it here, and I will credit you if it runs:\n' +
     SUBMIT_URL + '\n\n' +
-    'David\nDavid P. Stonko, MD, MS\n\n' +
+    'David Stonko\n\n' +
     'Unsubscribe: ' + unsub;
   const html =
     '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1a1a1a;max-width:560px">' +
@@ -325,7 +325,7 @@ function sendWelcome_(name, email, hasLatest) {
     'and medicine: a feature, the week\'s news, and something to watch or listen to. ' + latestLine + '</p>' +
     '<p>Seen something that belongs in it? Suggest it, and I will credit you if it runs.</p>' +
     button_(SUBMIT_URL, 'Suggest an item') +
-    '<p>David<br>David P. Stonko, MD, MS</p>' +
+    '<p>David Stonko</p>' +
     '<p style="font-size:12px;color:#777;margin-top:28px">You subscribed at localminimum.us. ' +
     '<a href="' + unsub + '" style="color:#777">Unsubscribe</a></p></div>';
   sendMail_({ to: email, subject: 'Welcome to ' + NEWSLETTER_NAME,
