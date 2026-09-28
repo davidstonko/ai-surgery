@@ -10,15 +10,15 @@ description: Claude skills built for academic surgery, free to download and use.
 
 <div class="prose" markdown="1">
 
-## Hopkins CV in Excel (stonkocv)
+## Stonko-format Excel CV (stonkocv)
 
-Turns any CV (Word, PDF, plain text or another spreadsheet) into the CV format Johns Hopkins mandates for promotion, built as a single-sheet Excel file: Book Antiqua 14, a fixed section order from personal information through teaching and mentoring, numbered two-row citation blocks, a self-updating date cell and an electronic-signature footer. It prints cleanly to PDF. Give Claude your current CV and ask it to "convert this CV with the stonkocv skill."
+Turns any CV (Word, PDF, plain text or another spreadsheet) into a single-sheet Excel CV in a layout I designed for my own CV. This is my format, not the official Hopkins one (see jhsomCV below for that): Book Antiqua 14, a fixed section order from personal information through teaching and mentoring, numbered two-row citation blocks, a self-updating date cell and an electronic-signature footer. It prints cleanly to PDF. Give Claude your current CV and ask it to "convert this CV to the Stonko format."
 
 **[Download stonkocv.zip](stonkocv.zip)** &middot; [Source on GitHub](https://github.com/davidstonko/stonkocv)
 
-## Hopkins ABMF CV (jhsomCV)
+## Official Hopkins ABMF CV (jhsomCV)
 
-Converts any CV into the Word format the Advisory Board of the Medical Faculty requires for appointment and promotion at the Johns Hopkins University School of Medicine. It restructures the CV into the full I to XII ABMF sections, verifies every publication against PubMed and classifies it by PubMed's own publication type, and reports discrepancies (authorship mismatches, duplicates, indexed papers missing from the CV) instead of silently fixing them. Ask Claude to "put my CV in the Hopkins promotions format." Check the ABMF rules against the version the committee is currently using before you submit.
+This is not my design. It converts any CV into the Word format that the Advisory Board of the Medical Faculty (ABMF) mandates for appointment and promotion at the Johns Hopkins University School of Medicine. It restructures the CV into the full I to XII ABMF sections, verifies every publication against PubMed and classifies it by PubMed's own publication type, and reports discrepancies (authorship mismatches, duplicates, indexed papers missing from the CV) instead of silently fixing them. Ask Claude to "put my CV in the Hopkins promotions format." Check the ABMF rules against the version the committee is currently using before you submit.
 
 **[Download jhsomcv.zip](jhsomcv.zip)** &middot; [Source on GitHub](https://github.com/davidstonko/jhsomcv)
 
