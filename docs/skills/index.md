@@ -10,9 +10,9 @@ description: Claude skills built for academic surgery, free to download and use.
 
 <div class="prose" markdown="1">
 
-## Stonko-format Excel CV
+## Hopkins CV in Excel (stonkocv)
 
-Turns any CV (Word, PDF, plain text or another spreadsheet) into a single-sheet Excel CV in the layout I use at Johns Hopkins: Book Antiqua 14, a fixed section order from personal information through teaching and mentoring, numbered two-row citation blocks, a self-updating date cell and an electronic-signature footer. It prints cleanly to PDF. Give Claude your current CV and ask it to "convert this CV to the Stonko format."
+Turns any CV (Word, PDF, plain text or another spreadsheet) into the CV format Johns Hopkins mandates for promotion, built as a single-sheet Excel file: Book Antiqua 14, a fixed section order from personal information through teaching and mentoring, numbered two-row citation blocks, a self-updating date cell and an electronic-signature footer. It prints cleanly to PDF. Give Claude your current CV and ask it to "convert this CV with the stonkocv skill."
 
 **[Download stonkocv.zip](stonkocv.zip)** &middot; [Source on GitHub](https://github.com/davidstonko/stonkocv)
 
