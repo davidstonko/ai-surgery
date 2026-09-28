@@ -1,8 +1,8 @@
 title: AI and Surgery Interest Group
 description: Resources, reading and notes on AI in surgical care.
 author: David P. Stonko, MD, MS
-url: https://localminimum.us
-baseurl: ""
+url: https://davidstonko.github.io
+baseurl: /ai-surgery
 markdown: kramdown
 kramdown:
   input: GFM
