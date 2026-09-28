@@ -256,10 +256,19 @@ function readIssue_(id) {
   return { file: f, html: f.getBlob().getDataAsString('UTF-8'), subject: f.getName().replace(/\.html?$/i, '') };
 }
 
+// The issue new members receive: the newest file in the Issues folder (so a corrected copy of a
+// sent issue can be dropped there), falling back to the last approved issue.
 function latestIssue_() {
-  const id = props_().getProperty('LATEST_ISSUE_ID');
-  if (!id) return null;
   try {
+    let newest = null;
+    const files = DriveApp.getFolderById(ISSUES_FOLDER_ID).getFiles();
+    while (files.hasNext()) {
+      const f = files.next();
+      if (!/\.html?$/i.test(f.getName()) && f.getMimeType() !== MimeType.HTML) continue;
+      if (!newest || f.getDateCreated() > newest.getDateCreated()) newest = f;
+    }
+    const id = newest ? newest.getId() : props_().getProperty('LATEST_ISSUE_ID');
+    if (!id) return null;
     const r = readIssue_(id);
     return { id: id, subject: r.subject, html: r.html };
   } catch (err) {
@@ -565,11 +574,29 @@ function decide(id, t, decision) {
  * Link format: <WEB_APP_URL>?action=unsubscribe&e=<email>&t=<unsubToken(email)>
  */
 
+// Opening the link only shows a confirmation page. Unsubscribing needs a button press, because
+// hospital email security scanners open every link in an email and would otherwise unsubscribe people.
 function handleUnsub_(p) {
   const email = String(p.e || '').toLowerCase();
   if (!email || p.t !== unsubToken(email)) {
-    return page_('Link not valid', 'Reply to any group email and we will remove you by hand.');
+    return page_('Link not valid', 'Reply to any email from the newsletter and we will remove you by hand.');
   }
+  const html =
+    '<div style="font-family:system-ui,sans-serif;max-width:520px;margin:60px auto;padding:0 16px;line-height:1.5">' +
+    '<h2 style="margin:0 0 8px">Unsubscribe from ' + NEWSLETTER_NAME + '?</h2>' +
+    '<p id="st" style="color:#555">' + esc_(email) + ' will stop receiving the newsletter.</p>' +
+    '<button id="b" onclick="go()" style="font:inherit;font-weight:600;background:#002D72;color:#fff;border:0;border-radius:6px;padding:11px 18px">Unsubscribe</button>' +
+    '<script>function go(){var b=document.getElementById("b");b.disabled=true;' +
+    'google.script.run.withSuccessHandler(function(m){document.getElementById("st").innerHTML=m;b.style.display="none";})' +
+    '.withFailureHandler(function(e){document.getElementById("st").textContent="Error: "+e.message;b.disabled=false;})' +
+    '.confirmUnsub(' + JSON.stringify(email) + ',' + JSON.stringify(String(p.t)) + ');}</script></div>';
+  return HtmlService.createHtmlOutput(html).setTitle('Unsubscribe')
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+function confirmUnsub(email, t) {
+  email = String(email || '').toLowerCase();
+  if (!email || t !== unsubToken(email)) throw new Error('Link not valid');
   const sh = sheet_(SUBS_SHEET_ID, SUBS_HEADERS);
   const last = sh.getLastRow();
   if (last > 1) {
@@ -578,8 +605,7 @@ function handleUnsub_(p) {
       if (String(emails[i][0]).toLowerCase() === email) sh.getRange(i + 2, 5).setValue('unsubscribed');
     }
   }
-  return page_('You are unsubscribed', 'You will not receive further emails. You can rejoin any time at ' +
-    '<a href="' + SITE_URL + '">' + SITE_URL + '</a>.');
+  return 'You are unsubscribed. You can rejoin any time at <a href="' + SITE_URL + '">' + SITE_URL + '</a>.';
 }
 
 /* Run once from the editor after pasting a new version: authorizes Drive and Mail,
