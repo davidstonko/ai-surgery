@@ -69,4 +69,4 @@ You don't need to accept Amodei's timeline to learn from his essay. He writes wi
 
 **[Read Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace)**
 
-*From [Local Minimum](https://davidstonko.github.io/ai-surgery/), Issue 1.*
+*From [Local Minimum](https://localminimum.us/), Issue 1.*

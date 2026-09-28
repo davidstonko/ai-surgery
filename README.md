@@ -37,7 +37,7 @@ Open `docs/index.html`, find `const ENDPOINT = "";` and paste the URL between th
 1. Create a new public repo on GitHub, for example `ai-surgery`.
 2. Push this folder to it.
 3. Repo Settings > Pages > Build and deployment > Deploy from a branch > `main` / `/docs` > Save.
-4. After a minute the site is live at `https://davidstonko.github.io/ai-surgery/`.
+4. After a minute the site is live at `https://localminimum.us/`.
 
 ### 4. Test, then send the invite
 1. Open the live page, sign up with your own email, confirm a row appears in the sheet.
@@ -47,7 +47,7 @@ Open `docs/index.html`, find `const ENDPOINT = "";` and paste the URL between th
 Edit the code in Apps Script, then Deploy > Manage deployments > edit (pencil) > Version: New version > Deploy. This keeps the same URL, so the page does not need to change.
 
 ## Newsletter suggestions
-Anyone can suggest an item at `docs/submit.html` (https://davidstonko.github.io/ai-surgery/submit.html): name, optional email, link, blurb, and whether to credit them by name. Each one lands in the Submissions Sheet (`AI and Surgery Interest Group - Submissions`) as `pending`, and a review email goes to dstonko1@jh.edu. Its Review button opens a page with Approve and Reject buttons. Opening the link alone changes nothing, so email link scanners can't approve anything. Approved items with credit = yes run in the next issue as "Suggested by Name". If the person left an email, they get a thank-you once the item is approved.
+Anyone can suggest an item at `docs/submit.html` (https://localminimum.us/submit.html): name, optional email, link, blurb, and whether to credit them by name. Each one lands in the Submissions Sheet (`AI and Surgery Interest Group - Submissions`) as `pending`, and a review email goes to dstonko1@jh.edu. Its Review button opens a page with Approve and Reject buttons. Opening the link alone changes nothing, so email link scanners can't approve anything. Approved items with credit = yes run in the next issue as "Suggested by Name". If the person left an email, they get a thank-you once the item is approved.
 
 ## Welcome email
 Each new sign-up gets a welcome email from the Google account that owns the script, shown as "AI and Surgery Interest Group", with replies going to dstonko1@jh.edu. It includes a personal unsubscribe link. Turn it off with `SEND_WELCOME = false`. Personal Gmail accounts can send about 100 script emails a day, which is plenty for sign-ups.
