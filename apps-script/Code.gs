@@ -724,3 +724,9 @@ function setup() {
   ScriptApp.newTrigger('tick').timeBased().everyMinutes(10).create();
   Logger.log('Ready. Sending via ' + (cfToken_() ? 'Cloudflare as ' + FROM_ADDRESS : 'this Google account') + '. Quota left today: ' + remainingQuota_());
 }
+
+/* Run from the editor to confirm sending works (for example after rolling the Cloudflare token). */
+function testSend() {
+  sendMail_({ to: REVIEW_EMAIL, subject: 'Test from ' + NEWSLETTER_NAME,
+    body: 'Sending works. This test was run from the Apps Script editor.', name: NEWSLETTER_NAME, replyTo: REPLY_TO });
+}
