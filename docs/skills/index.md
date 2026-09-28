@@ -24,6 +24,10 @@ A formatting skill for the Johns Hopkins Department of Surgery (The Johns Hopkin
 
 No install needed for a one-off: download [JH-Surgery-Format.md](https://github.com/davidstonko/jh-surgery-format/raw/main/JH-Surgery-Format.md) and attach it to a Claude chat.
 
+## Suggest a skill
+
+Know of a Claude skill that might be important to surgeons or physicians, or one you built yourself? **[Suggest a skill](../submit.html)** with a link and a few lines on what it does. If it is useful, I will add it here and credit you.
+
 ## How to install a skill
 
 1. In Claude, turn on code execution: **Settings > Capabilities** (Team and Enterprise plans: your admin enables it under Organization settings).
