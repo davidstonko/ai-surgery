@@ -1,7 +1,7 @@
 /**
- * AI and Surgery Interest Group: backend.
+ * The Local Minimum (localminimum.us): backend.
  * - Sign-ups from the GitHub Pages site go to the Subscribers Sheet. Each new member gets
- *   a welcome email and then the most recent Local Minimum issue.
+ *   a welcome email and then the most recent issue.
  * - Newsletter issues: a draft HTML file dropped in the Drive Outbox folder is emailed to
  *   David for review. The email links to an approval page; pressing Send there mails the
  *   issue to every subscriber, each with a personal unsubscribe link, and archives it.
@@ -15,8 +15,8 @@
  * and installs the 10-minute timer that checks the Outbox and continues sends.
  */
 
-const GROUP_NAME = 'AI and Surgery Interest Group';
-const NEWSLETTER_NAME = 'Local Minimum';
+const GROUP_NAME = 'The Local Minimum';
+const NEWSLETTER_NAME = 'The Local Minimum';
 const SITE_URL = 'https://localminimum.us/';
 const SUBMIT_URL = SITE_URL + 'submit.html';
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec';
@@ -254,8 +254,7 @@ function sendWelcome_(name, email, hasLatest) {
   const latestLine = hasLatest ? 'The most recent issue is on its way in a separate email.' : '';
   const text =
     'Hi ' + first + ',\n\n' +
-    'Thanks for joining the ' + GROUP_NAME + '.\n\n' +
-    'You will get ' + NEWSLETTER_NAME + ', my roughly weekly email on AI and how it relates to surgery ' +
+    'Thanks for subscribing to ' + NEWSLETTER_NAME + ', my roughly weekly email on AI and how it relates to surgery ' +
     'and medicine: a feature, the week\'s news, and something to watch or listen to. ' + latestLine + '\n\n' +
     'Seen something that belongs in it? Suggest it here, and I will credit you if it runs:\n' +
     SUBMIT_URL + '\n\n' +
@@ -264,15 +263,14 @@ function sendWelcome_(name, email, hasLatest) {
   const html =
     '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1a1a1a;max-width:560px">' +
     '<p>Hi ' + esc_(first) + ',</p>' +
-    '<p>Thanks for joining the <b>' + GROUP_NAME + '</b>.</p>' +
-    '<p>You will get <b>' + NEWSLETTER_NAME + '</b>, my roughly weekly email on AI and how it relates to surgery ' +
+    '<p>Thanks for subscribing to <b>' + NEWSLETTER_NAME + '</b>, my roughly weekly email on AI and how it relates to surgery ' +
     'and medicine: a feature, the week\'s news, and something to watch or listen to. ' + latestLine + '</p>' +
     '<p>Seen something that belongs in it? Suggest it, and I will credit you if it runs.</p>' +
     button_(SUBMIT_URL, 'Suggest an item') +
     '<p>David<br>David P. Stonko, MD, MS</p>' +
-    '<p style="font-size:12px;color:#777;margin-top:28px">You signed up at the group\'s sign-up page. ' +
+    '<p style="font-size:12px;color:#777;margin-top:28px">You subscribed at localminimum.us. ' +
     '<a href="' + unsub + '" style="color:#777">Unsubscribe</a></p></div>';
-  sendMail_({ to: email, subject: 'Welcome to the ' + GROUP_NAME,
+  sendMail_({ to: email, subject: 'Welcome to ' + NEWSLETTER_NAME,
     body: text, htmlBody: html, name: GROUP_NAME, replyTo: REPLY_TO });
 }
 

@@ -1,24 +1,18 @@
-Subject: New AI and Surgery Interest Group, join the list
+Subject: The Local Minimum, a short weekly email on AI in surgery
 
 Hi all,
 
-I'm starting an AI and Surgery Interest Group in the Department of Surgery. The goal is simple: a place for surgeons, trainees, scientists and engineers to share what is working, what isn't, and where AI is actually changing how we care for surgical patients.
+I'm starting The Local Minimum, a short, roughly weekly email on AI and how it relates to surgery and medicine. Each issue has a feature on an important paper, essay or event with my take, the week's news, and something worth watching or listening to. You can also suggest items yourself, credited to you if they run.
 
-Here is how it will work:
-
-- A short weekly email with the papers, talks and podcasts I think are worth your time, with a few notes on each
-- Occasional meetings and invited speakers
-- A way to suggest papers, talks and podcasts yourself, credited to you if they run
-
-If you're interested, add your name and preferred email here (any address works, Hopkins or not):
+Subscribe here (any address works):
 
 https://localminimum.us/subscribe/?src=invite
 
-Please forward this to anyone who would want to be involved, inside or outside the department.
+Past issues, resources and a few free Claude skills are at https://localminimum.us.
+
+Please forward this to anyone who would want it.
 
 Best,
 David
 
 David P. Stonko, MD, MS
-Division of Vascular Surgery and Endovascular Therapy
-Johns Hopkins Department of Surgery

@@ -2,7 +2,7 @@
 layout: default
 title: About
 nav: about
-description: David P. Stonko, MD, MS, vascular surgery and endovascular therapy fellow at Johns Hopkins Hospital and author of Local Minimum.
+description: David P. Stonko, MD, MS, vascular surgery and endovascular therapy fellow at Johns Hopkins Hospital and author of The Local Minimum.
 ---
 # About
 
@@ -17,6 +17,6 @@ David has published over 130 research articles and book chapters and has present
 - [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en)
 - [LinkedIn](https://www.linkedin.com/in/david-stonko-4960a878/)
 
-The views on this site and in Local Minimum are David's own and do not represent Johns Hopkins University or Johns Hopkins Medicine.
+The views on this site and in The Local Minimum are David's own and do not represent Johns Hopkins University or Johns Hopkins Medicine.
 
 </div>
