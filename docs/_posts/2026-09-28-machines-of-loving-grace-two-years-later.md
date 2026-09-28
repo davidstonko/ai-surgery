@@ -63,7 +63,7 @@ There are two main counterarguments. First is Niko McCarty's [response](https://
 
 The regulatory question is now open. On September 19, President Trump said he would create an ["AI Force"](https://www.forbes.com/sites/maryroeloffs/2026/09/19/trump-vows-to-launch-ai-force-to-safeguard-us-dominance/) and name an AI czar, and rejected calls, including Amodei's, to slow frontier development, arguing that it would cede ground to China. Supporters of regulation argue that systems this capable need binding safety standards and independent oversight before wide deployment, much as drugs and devices do. Critics counter that when the largest AI companies ask for regulation, they are seeking regulatory capture: licensing and compliance rules that incumbents can afford and startups and open-source developers cannot, which builds a moat around the leaders. How this is resolved will shape how quickly any of Amodei's predictions reach patients.
 
-## Where I land
+## My thoughts
 
 You don't need to accept Amodei's timeline to learn from his essay. He writes with long prose, which can be a little tedious, but it has more clarity on his position than the sound bites you might get from CNBC about AI risks. My summary leaves out most of what makes it worth reading: the reasoning behind each prediction, the limits he acknowledges, and sections on neuroscience, economics, and governance that I didn't cover at all. The introduction and the biology section take about 20 minutes.
 
