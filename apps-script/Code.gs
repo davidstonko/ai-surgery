@@ -731,4 +731,4 @@ function testSend(to) {
     body: 'Sending works. This test was run from the Apps Script editor.', name: NEWSLETTER_NAME, replyTo: REPLY_TO });
 }
 
-function testSendGmail() { testSend(NOTIFY_EMAIL); }
+function testSendGmail() { testSend('dstonko1@gmail.com'); }
