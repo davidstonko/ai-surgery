@@ -237,7 +237,7 @@ function handleSignup_(p) {
     catch (err) { console.error('latest issue failed: ' + err); }
   }
   if (NOTIFY_EMAIL) {
-    sendMail_({ to: NOTIFY_EMAIL, subject: 'New ' + GROUP_NAME + ' sign-up: ' + name,
+    sendMail_({ to: NOTIFY_EMAIL, subject: 'New subscriber: ' + name,
       body: name + ' <' + email + '>' + (role ? '\n' + role : ''), name: GROUP_NAME });
   }
   return json_({ ok: true });
@@ -632,7 +632,7 @@ function decide(id, t, decision) {
 function handleUnsub_(p) {
   const email = String(p.e || '').toLowerCase();
   if (!email || p.t !== unsubToken(email)) {
-    return page_('Link not valid', 'Reply to any email from the newsletter and we will remove you by hand.');
+    return page_('Link not valid', 'Reply to any email from the newsletter and I will remove you by hand.');
   }
   const html =
     '<div style="font-family:system-ui,sans-serif;max-width:520px;margin:60px auto;padding:0 16px;line-height:1.5">' +
@@ -658,7 +658,7 @@ function confirmUnsub(email, t) {
       if (String(emails[i][0]).toLowerCase() === email) sh.getRange(i + 2, 5).setValue('unsubscribed');
     }
   }
-  return 'You are unsubscribed. You can rejoin any time at <a href="' + SITE_URL + '">' + SITE_URL + '</a>.';
+  return 'You are unsubscribed. You can rejoin any time at <a href="' + SITE_URL + 'subscribe/">' + SITE_URL + 'subscribe/</a>.';
 }
 
 /* Run once from the editor after pasting a new version: authorizes Drive and Mail,

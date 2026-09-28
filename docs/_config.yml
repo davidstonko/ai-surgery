@@ -1,5 +1,5 @@
 title: LocalMinimum.us
-description: Resources, reading and notes on AI in surgical care.
+description: David Stonko's website and The Local Minimum, a weekly email on AI in surgery and medicine.
 author: David P. Stonko, MD, MS
 url: https://localminimum.us
 baseurl: ""
@@ -9,6 +9,7 @@ kramdown:
 permalink: /library/:year/:month/:title/
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 feed:
   path: feed.xml
 defaults:

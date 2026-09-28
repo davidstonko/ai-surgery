@@ -10,9 +10,10 @@ description: Johns Hopkins AI tools and policies, and where to start reading on 
 
 <div class="prose" markdown="1">
 
-## The group
+## The newsletter
 
-- [Join the mailing list](../) for the weekly email.
+- [Subscribe](../subscribe/) to The Local Minimum, the weekly email.
+- [Past issues](../issues/) of the newsletter.
 - [Suggest an item](../submit.html) for the newsletter.
 - [Library](../library/): posts and reading lists.
 

@@ -1,11 +1,11 @@
 :root {
   --bg: #f6f7f9; --card: #ffffff; --ink: #14213d; --muted: #5b6475; --line: #dde1e8;
-  --accent: #002d72; --accent-ink: #ffffff; --soft: #eef2f8;
+  --accent: #002d72; --accent-ink: #ffffff; --soft: #eef2f8; --ok: #1f7a4d; --err: #b3261e;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0e1320; --card: #161d2e; --ink: #e8ecf4; --muted: #a2abbd; --line: #2a3347;
-    --accent: #6f9bff; --accent-ink: #0e1320; --soft: #1b2438;
+    --accent: #6f9bff; --accent-ink: #0e1320; --soft: #1b2438; --ok: #5fd39a; --err: #ff8a80;
   }
 }
 * { box-sizing: border-box; }
@@ -56,3 +56,6 @@ h1 { font-size: 36px; margin: 0 0 12px; }
   h1 { font-size: 29px; }
   .lede, .dek { font-size: 17px; }
 }
+
+.issue { background: #ffffff; color: #222222; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 0 0 8px; }
+.issue a { color: #002d72; }
