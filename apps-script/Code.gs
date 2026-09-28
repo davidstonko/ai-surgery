@@ -129,8 +129,9 @@ function button_(href, label) {
 
 function cfToken_() { return PropertiesService.getScriptProperties().getProperty('CF_API_TOKEN'); }
 
-// Emails left today. Cloudflare has no fixed daily cap for us, so allow a large number and rely
-// on its rate-limit replies; the Google account allows about 100 a day.
+// Emails left today. Cloudflare sets a daily quota that grows with good sending history (200 at
+// the start); when it is reached the send fails and the rest wait for a later run. The Google
+// account allows about 100 a day.
 function remainingQuota_() { return cfToken_() ? 100000 : MailApp.getRemainingDailyQuota(); }
 
 // One interface for all outgoing mail: {to, subject, body, htmlBody, name, replyTo, headers}.
@@ -158,7 +159,9 @@ function sendMail_(o) {
     return;
   }
   const e = new Error('Cloudflare send failed (' + code + '): ' + JSON.stringify(j.errors || res.getContentText()).slice(0, 300));
-  if (code === 429) e.rateLimited = true;
+  // Any API-level failure (rate limit, daily quota, outage) is retried on a later run rather than
+  // recorded against the subscriber.
+  e.rateLimited = true;
   throw e;
 }
 
@@ -502,7 +505,7 @@ function processSendQueue_() {
         if (Date.now() - started > 4.5 * 60 * 1000) break; // Apps Script stops runs at 6 minutes
         try { if (deliverIssue_(o.id, o.st.subject, r.html, todo[i].email, done)) sent++; }
         catch (err) {
-          if (err && err.rateLimited) break; // try again on the next 10-minute run
+          if (err && err.rateLimited) break; // Cloudflare limit or outage: try again on the next 10-minute run
           console.error('send to ' + todo[i].email + ' failed: ' + err);
           sendsSheet_().appendRow([new Date(), o.id, o.st.subject, todo[i].email, 'error: ' + err]);
           done[todo[i].email] = true;
