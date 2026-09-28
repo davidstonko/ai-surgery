@@ -1,10 +1,10 @@
 ---
 layout: default
-title: About
+title: About Me
 nav: about
 description: David P. Stonko, MD, MS, vascular surgery and endovascular therapy fellow at Johns Hopkins Hospital and author of The Local Minimum.
 ---
-# About
+# About Me
 
 <p class="lede">David P. Stonko, MD, MS</p>
 
