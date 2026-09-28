@@ -17,7 +17,7 @@
 
 const GROUP_NAME = 'AI and Surgery Interest Group';
 const NEWSLETTER_NAME = 'Local Minimum';
-const SITE_URL = 'https://localminimum.us/';
+const SITE_URL = 'https://davidstonko.github.io/ai-surgery/';
 const SUBMIT_URL = SITE_URL + 'submit.html';
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec';
 
