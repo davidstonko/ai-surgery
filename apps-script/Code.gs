@@ -173,9 +173,12 @@ function button_(href, label) {
 
 /* ---------- Mail ---------- */
 
-// Cloudflare delivery failed for every test on 2026-09-28 (beta service), so mail goes through Gmail
-// until this is switched back to true.
-const USE_CLOUDFLARE = false;
+// Mail goes out through Cloudflare from newsletter@localminimum.us. Hopkins mail servers reject the
+// domain for now (it was registered 2026-09-28 and has no sending reputation yet: "rejected due to poor
+// reputation of a domain used in message transfer"), so Hopkins addresses go through Gmail until that
+// changes. Empty the list to send everything through Cloudflare.
+const USE_CLOUDFLARE = true;
+const GMAIL_DOMAINS = /@(.+\.)?(jh\.edu|jhmi\.edu|jhu\.edu|jhsph\.edu|jhuapl\.edu|jhu\.jh\.edu)$/i;
 let FORCE_CLOUDFLARE_ = false;
 function cfToken_() { return (USE_CLOUDFLARE || FORCE_CLOUDFLARE_) ? PropertiesService.getScriptProperties().getProperty('CF_API_TOKEN') : null; }
 
@@ -186,8 +189,11 @@ function remainingQuota_() { return cfToken_() ? 100000 : MailApp.getRemainingDa
 
 // One interface for all outgoing mail: {to, subject, body, htmlBody, name, replyTo, headers}.
 function sendMail_(o) {
-  const token = cfToken_();
+  const token = GMAIL_DOMAINS.test(String(o.to)) ? null : cfToken_();
   if (!token) {
+    if (MailApp.getRemainingDailyQuota() < 1) {
+      const q = new Error('Gmail daily quota reached'); q.rateLimited = true; throw q;
+    }
     MailApp.sendEmail({ to: o.to, subject: o.subject, body: o.body || plainText_(o.htmlBody || ''),
       htmlBody: o.htmlBody, name: o.name, replyTo: o.replyTo });
     return;
