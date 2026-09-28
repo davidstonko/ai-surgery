@@ -321,12 +321,18 @@ function deliverIssue_(id, subject, html, email, alreadySent) {
 
 // New or edited file in the Outbox: email David a preview with a link to the approval page.
 function checkOutbox_() {
+  const lock = LockService.getScriptLock();
+  if (!lock.tryLock(20000)) return;
+  try { checkOutboxLocked_(); } finally { lock.releaseLock(); }
+}
+
+function checkOutboxLocked_() {
   const files = DriveApp.getFolderById(OUTBOX_FOLDER_ID).getFiles();
   while (files.hasNext()) {
     const f = files.next();
     const id = f.getId();
     const st = issueState_(id);
-    if (st && (st.status === 'sending' || st.status === 'sent')) continue;
+    if (st && st.status !== 'pending') continue; // sending, sent or superseded
     const html = f.getBlob().getDataAsString('UTF-8');
     const h = hash_(html);
     if (st && st.status === 'pending' && st.hash === h) continue;
