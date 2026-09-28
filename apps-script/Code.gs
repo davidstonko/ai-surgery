@@ -726,7 +726,9 @@ function setup() {
 }
 
 /* Run from the editor to confirm sending works (for example after rolling the Cloudflare token). */
-function testSend() {
-  sendMail_({ to: REVIEW_EMAIL, subject: 'Test from ' + NEWSLETTER_NAME,
+function testSend(to) {
+  sendMail_({ to: (typeof to === 'string' && to) || REVIEW_EMAIL, subject: 'Test from ' + NEWSLETTER_NAME,
     body: 'Sending works. This test was run from the Apps Script editor.', name: NEWSLETTER_NAME, replyTo: REPLY_TO });
 }
+
+function testSendGmail() { testSend(NOTIFY_EMAIL); }
