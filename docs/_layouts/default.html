@@ -11,13 +11,13 @@
 <body>
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="{{ '/library/' | relative_url }}">AI and Surgery <span>Interest Group</span></a>
+    <a class="brand" href="{{ '/' | relative_url }}">AI and Surgery <span>Interest Group</span></a>
     <nav>
       <a href="{{ '/library/' | relative_url }}"{% if page.nav == 'library' or page.layout == 'post' %} class="on"{% endif %}>Library</a>
       <a href="{{ '/resources/' | relative_url }}"{% if page.nav == 'resources' %} class="on"{% endif %}>Resources</a>
       <a href="{{ '/skills/' | relative_url }}"{% if page.nav == 'skills' %} class="on"{% endif %}>Skills</a>
       <a href="{{ '/submit.html' | relative_url }}">Suggest</a>
-      <a class="join" href="{{ '/' | relative_url }}">Join</a>
+      <a class="join" href="{{ '/subscribe/' | relative_url }}">Subscribe</a>
     </nav>
   </div>
 </header>
@@ -26,7 +26,7 @@
 </main>
 <footer class="wrap foot">
   <p>{{ site.title }} &middot; Organized by David P. Stonko, MD, MS</p>
-  <p><a href="{{ '/' | relative_url }}">Join the list</a> &middot; <a href="{{ '/submit.html' | relative_url }}">Suggest an item</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+  <p><a href="{{ '/subscribe/' | relative_url }}">Subscribe</a> &middot; <a href="{{ '/submit.html' | relative_url }}">Suggest an item</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
 </footer>
 </body>
 </html>

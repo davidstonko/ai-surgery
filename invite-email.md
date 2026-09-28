@@ -12,7 +12,7 @@ Here is how it will work:
 
 If you're interested, add your name and preferred email here (any address works, Hopkins or not):
 
-https://localminimum.us/?src=invite
+https://localminimum.us/subscribe/?src=invite
 
 Please forward this to anyone who would want to be involved, inside or outside the department.
 

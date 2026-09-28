@@ -1,198 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Local Minimum</title>
-<meta name="description" content="Local Minimum: a weekly email on AI and surgery by David Stonko.">
-<style>
-  :root {
-    --bg: #f6f7f9;
-    --card: #ffffff;
-    --ink: #14213d;
-    --muted: #5b6475;
-    --line: #dde1e8;
-    --accent: #002d72;
-    --accent-ink: #ffffff;
-    --ok: #1f7a4d;
-    --err: #b3261e;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0e1320;
-      --card: #161d2e;
-      --ink: #e8ecf4;
-      --muted: #a2abbd;
-      --line: #2a3347;
-      --accent: #6f9bff;
-      --accent-ink: #0e1320;
-      --ok: #5fd39a;
-      --err: #ff8a80;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    border-top: 4px solid #F1C400;
-    background: var(--bg);
-    color: var(--ink);
-    font: 16px/1.55 Arial, "Helvetica Neue", Helvetica, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px 16px;
-  }
-  main {
-    width: 100%;
-    max-width: 520px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 36px 32px 28px;
-  }
-  .eyebrow {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 10px;
-  }
-  h1 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 1.15;
-    margin: 0 0 14px;
-  }
-  p { margin: 0 0 14px; color: var(--muted); }
-  ul { margin: 0 0 24px; padding-left: 20px; color: var(--muted); }
-  li { margin: 4px 0; }
-  form { display: grid; gap: 14px; }
-  label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
-  .opt { color: var(--muted); font-weight: 400; }
-  input, select {
-    font: inherit;
-    color: var(--ink);
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 11px 12px;
-    width: 100%;
-  }
-  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
-  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  button {
-    font: inherit;
-    font-weight: 600;
-    background: var(--accent);
-    color: var(--accent-ink);
-    border: 0;
-    border-radius: 8px;
-    padding: 12px 16px;
-    cursor: pointer;
-    margin-top: 4px;
-  }
-  button[disabled] { opacity: .6; cursor: default; }
-  .msg { font-size: 14px; margin: 4px 0 0; min-height: 1.4em; }
-  .msg.ok { color: var(--ok); }
-  .msg.err { color: var(--err); }
-  .done { display: none; }
-  .done h2 { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 24px; margin: 0 0 10px; }
-  .fine { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 24px; padding-top: 16px; }
-  .fine p { margin: 0 0 6px; }
-</style>
-</head>
-<body>
-<main>
-  <h1>Local Minimum</h1>
+---
+layout: default
+title: Local Minimum
+nav: home
+description: Local Minimum, a weekly email on AI in surgery and medicine by David Stonko, with a library of past features, resources and Claude skills.
+---
+<h1>Local Minimum</h1>
+<p class="lede">A short, roughly weekly email on AI and how it relates to surgery and medicine, by David Stonko. Past features, resources and Claude skills live here.</p>
+<p style="margin:0 0 36px"><a href="{{ '/subscribe/' | relative_url }}" style="display:inline-block;background:var(--accent);color:var(--accent-ink);padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none">Subscribe to the newsletter</a></p>
 
-  <section id="join">
-    <p>A short, roughly weekly email on AI and how it relates to surgery and medicine, for surgeons, trainees, scientists and engineers.</p>
-    <ul>
-      <li>A feature on an important paper, essay or event, with my take</li>
-      <li>The week's news, plus something worth watching or listening to</li>
-    </ul>
+<h2 class="section-title">Library</h2>
+<ul class="list">
+{% for post in site.posts %}
+  <li>
+    <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.dek | default: post.excerpt | strip_html | truncate: 200 }}</p>
+  </li>
+{% endfor %}
+</ul>
 
-    <form id="signup" novalidate>
-      <label>Name
-        <input name="name" autocomplete="name" required maxlength="120">
-      </label>
-      <label>Email
-        <input name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@example.com">
-      </label>
-      <label><span>Role <span class="opt">(optional)</span></span>
-        <select name="role">
-          <option value="">Select</option>
-          <option>Attending surgeon</option>
-          <option>Resident or fellow</option>
-          <option>Medical student</option>
-          <option>Researcher or data scientist</option>
-          <option>Engineer</option>
-          <option>Nurse, APP or other clinician</option>
-          <option>Industry</option>
-          <option>Other</option>
-        </select>
-      </label>
-      <div class="hp" aria-hidden="true">
-        <label>Website <input name="website" tabindex="-1" autocomplete="off"></label>
-      </div>
-      <button type="submit" id="btn">Subscribe</button>
-      <p class="msg" id="msg" role="status" aria-live="polite"></p>
-    </form>
-  </section>
-
-  <section class="done" id="done">
-    <h2>You're subscribed.</h2>
-    <p>A welcome email is on its way, followed by the most recent issue. If they don't arrive, check your spam folder.</p>
-  </section>
-
-  <div class="fine">
-    <p>Seen something that belongs in it? <a href="submit.html" style="color:var(--accent);font-weight:500">Suggest it for the newsletter</a>.</p>
-    <p>Your email is used only for the newsletter and is never shared. Every email includes an unsubscribe link.</p>
-    <p><a href="library/" style="color:var(--accent);font-weight:500">Library</a> &middot; <a href="resources/" style="color:var(--accent);font-weight:500">Resources</a> &middot; <a href="skills/" style="color:var(--accent);font-weight:500">Claude skills</a></p>
-    <p>By David P. Stonko, MD, MS. Part of the AI and Surgery Interest Group.</p>
-  </div>
-</main>
-
-<script>
-  // Paste the Apps Script web app URL here after deploying (see README).
-  const ENDPOINT = "https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec";
-
-  const form = document.getElementById("signup");
-  const msg = document.getElementById("msg");
-  const btn = document.getElementById("btn");
-  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-  function show(text, cls) { msg.textContent = text; msg.className = "msg " + (cls || ""); }
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const name = (data.get("name") || "").trim();
-    const email = (data.get("email") || "").trim();
-    if (!name) return show("Please enter your name.", "err");
-    if (!emailRe.test(email)) return show("Please enter a valid email address.", "err");
-    if (!ENDPOINT) return show("Sign-up isn't open yet. Please try again soon.", "err");
-
-    btn.disabled = true;
-    show("Adding you to the list...");
-    const body = new URLSearchParams({
-      name, email,
-      role: data.get("role") || "",
-      website: data.get("website") || "",
-      source: new URLSearchParams(location.search).get("src") || "web"
-    });
-    try {
-      await fetch(ENDPOINT, { method: "POST", mode: "no-cors", body });
-      document.getElementById("join").style.display = "none";
-      document.getElementById("done").style.display = "block";
-    } catch (err) {
-      btn.disabled = false;
-      show("Something went wrong. Please try again.", "err");
-    }
-  });
-</script>
-</body>
-</html>
+<h2 class="section-title">Also here</h2>
+<ul class="list">
+  <li>
+    <h2><a href="{{ '/resources/' | relative_url }}">Resources</a></h2>
+    <p>Hopkins AI tools and policies, and where to start reading.</p>
+  </li>
+  <li>
+    <h2><a href="{{ '/skills/' | relative_url }}">Claude skills</a></h2>
+    <p>Free downloads that teach Claude recurring academic tasks, starting with a CV converter.</p>
+  </li>
+  <li>
+    <h2><a href="{{ '/submit.html' | relative_url }}">Suggest an item</a></h2>
+    <p>Send a paper, talk or podcast for the newsletter. Credited to you if it runs.</p>
+  </li>
+</ul>
