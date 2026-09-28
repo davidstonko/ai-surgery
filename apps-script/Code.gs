@@ -17,7 +17,7 @@
 
 const GROUP_NAME = 'AI and Surgery Interest Group';
 const NEWSLETTER_NAME = 'Local Minimum';
-const SITE_URL = 'https://davidstonko.github.io/ai-surgery/';
+const SITE_URL = 'https://localminimum.us/';
 const SUBMIT_URL = SITE_URL + 'submit.html';
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec';
 
@@ -42,6 +42,11 @@ const NOTIFY_EMAIL = '';
 // Emails to subscribers come from this Google account, replies go to REPLY_TO.
 const SEND_WELCOME = true;
 const REPLY_TO = 'dstonko1@jh.edu';
+
+// Sending through Cloudflare Email Service when the CF_API_TOKEN script property is set
+// (Project Settings > Script properties). Without it, mail goes through this Google account.
+const CF_ACCOUNT_ID = '3938d554dac9256ad2719dda4920552b';
+const FROM_ADDRESS = 'newsletter@localminimum.us';
 
 // A personal Gmail account can send to about 100 recipients a day. Issue sends stop this many
 // short of the limit so welcome emails still go out, and the timer finishes the rest tomorrow.
@@ -120,11 +125,53 @@ function button_(href, label) {
     'font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none">' + label + '</a></td></tr></table>';
 }
 
+/* ---------- Mail ---------- */
+
+function cfToken_() { return PropertiesService.getScriptProperties().getProperty('CF_API_TOKEN'); }
+
+// Emails left today. Cloudflare has no fixed daily cap for us, so allow a large number and rely
+// on its rate-limit replies; the Google account allows about 100 a day.
+function remainingQuota_() { return cfToken_() ? 100000 : MailApp.getRemainingDailyQuota(); }
+
+// One interface for all outgoing mail: {to, subject, body, htmlBody, name, replyTo, headers}.
+function sendMail_(o) {
+  const token = cfToken_();
+  if (!token) {
+    MailApp.sendEmail({ to: o.to, subject: o.subject, body: o.body || plainText_(o.htmlBody || ''),
+      htmlBody: o.htmlBody, name: o.name, replyTo: o.replyTo });
+    return;
+  }
+  const payload = { to: o.to, from: { address: FROM_ADDRESS, name: o.name || NEWSLETTER_NAME },
+    subject: o.subject, text: o.body || plainText_(o.htmlBody || '') };
+  if (o.htmlBody) payload.html = o.htmlBody;
+  if (o.replyTo) payload.reply_to = o.replyTo;
+  if (o.headers) payload.headers = o.headers;
+  const res = UrlFetchApp.fetch('https://api.cloudflare.com/client/v4/accounts/' + CF_ACCOUNT_ID + '/email/sending/send', {
+    method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+    headers: { Authorization: 'Bearer ' + token }, payload: JSON.stringify(payload) });
+  const code = res.getResponseCode();
+  let j = {};
+  try { j = JSON.parse(res.getContentText()); } catch (err) {}
+  if (code === 200 && j.success) {
+    const r = j.result || {};
+    if ((r.permanent_bounces || []).length) throw new Error('bounced: ' + r.permanent_bounces.join(', '));
+    return;
+  }
+  const e = new Error('Cloudflare send failed (' + code + '): ' + JSON.stringify(j.errors || res.getContentText()).slice(0, 300));
+  if (code === 429) e.rateLimited = true;
+  throw e;
+}
+
 /* ---------- Entry points ---------- */
 
 function doPost(e) {
   const p = (e && e.parameter) || {};
   if (p.website) return json_({ ok: true }); // honeypot: bots fill the hidden field
+  // One-click unsubscribe (RFC 8058): mail apps POST to the List-Unsubscribe URL when the reader asks.
+  if (p.action === 'unsubscribe') {
+    try { confirmUnsub(p.e, p.t); } catch (err) {}
+    return ContentService.createTextOutput('Unsubscribed');
+  }
   if (p.type === 'submit') return handleSubmit_(p);
   return handleSignup_(p);
 }
@@ -187,8 +234,8 @@ function handleSignup_(p) {
     catch (err) { console.error('latest issue failed: ' + err); }
   }
   if (NOTIFY_EMAIL) {
-    MailApp.sendEmail(NOTIFY_EMAIL, 'New ' + GROUP_NAME + ' sign-up: ' + name,
-      name + ' <' + email + '>' + (role ? '\n' + role : ''));
+    sendMail_({ to: NOTIFY_EMAIL, subject: 'New ' + GROUP_NAME + ' sign-up: ' + name,
+      body: name + ' <' + email + '>' + (role ? '\n' + role : ''), name: GROUP_NAME });
   }
   return json_({ ok: true });
 }
@@ -222,7 +269,7 @@ function sendWelcome_(name, email, hasLatest) {
     '<p>David<br>David P. Stonko, MD, MS</p>' +
     '<p style="font-size:12px;color:#777;margin-top:28px">You signed up at the group\'s sign-up page. ' +
     '<a href="' + unsub + '" style="color:#777">Unsubscribe</a></p></div>';
-  MailApp.sendEmail({ to: email, subject: 'Welcome to the ' + GROUP_NAME,
+  sendMail_({ to: email, subject: 'Welcome to the ' + GROUP_NAME,
     body: text, htmlBody: html, name: GROUP_NAME, replyTo: REPLY_TO });
 }
 
@@ -321,8 +368,10 @@ function deliverIssue_(id, subject, html, email, alreadySent) {
   const done = alreadySent || sentTo_(id);
   if (done[email]) return false;
   const body = personalize_(html, email);
-  MailApp.sendEmail({ to: email, subject: subject, htmlBody: body, body: plainText_(body),
-    name: NEWSLETTER_NAME, replyTo: REPLY_TO });
+  const unsub = unsubLink_(email);
+  sendMail_({ to: email, subject: subject, htmlBody: body, body: plainText_(body),
+    name: NEWSLETTER_NAME, replyTo: REPLY_TO,
+    headers: { 'List-Unsubscribe': '<' + unsub + '>', 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } });
   sendsSheet_().appendRow([new Date(), id, subject, email, 'sent']);
   done[email] = true;
   return true;
@@ -374,7 +423,7 @@ function sendReview_(id, subject, html) {
     '<b>Draft for your approval.</b> Nothing goes to the list until you open the approval page and press Send. ' +
     'It will go to ' + n + ' subscriber' + (n === 1 ? '' : 's') + '. To change it, tell Claude what to edit; ' +
     'a new draft email will replace this one.' + button_(link, 'Review and send') + '</div>';
-  MailApp.sendEmail({ to: REVIEW_EMAIL, subject: '[Approve] ' + subject,
+  sendMail_({ to: REVIEW_EMAIL, subject: '[Approve] ' + subject,
     htmlBody: box + personalize_(html, ''),
     body: 'Draft of ' + subject + ' for your approval. Review and send: ' + link,
     name: NEWSLETTER_NAME });
@@ -433,7 +482,7 @@ function approveIssue(id, t) {
   }
   const r = processSendQueue_();
   return r.remaining
-    ? 'Status: <b>sending</b>. ' + r.sent + ' sent today; the other ' + r.remaining + ' go out automatically tomorrow.'
+    ? 'Status: <b>sending</b>. ' + r.sent + ' sent so far; the other ' + r.remaining + ' go out automatically over the next runs.'
     : 'Status: <b>sent</b> to ' + r.sent + ' subscriber' + (r.sent === 1 ? '' : 's') + '.';
 }
 
@@ -441,6 +490,7 @@ function processSendQueue_() {
   const lock = LockService.getScriptLock();
   if (!lock.tryLock(20000)) return { sent: 0, remaining: 0 };
   let sent = 0, remaining = 0;
+  const started = Date.now();
   try {
     allIssueStates_().filter(o => o.st.status === 'sending').forEach(o => {
       const r = readIssue_(o.id);
@@ -448,9 +498,11 @@ function processSendQueue_() {
       const todo = activeSubscribers_().filter(s => !done[s.email]);
       let i = 0;
       for (; i < todo.length; i++) {
-        if (MailApp.getRemainingDailyQuota() <= QUOTA_RESERVE) break;
+        if (remainingQuota_() <= QUOTA_RESERVE) break;
+        if (Date.now() - started > 4.5 * 60 * 1000) break; // Apps Script stops runs at 6 minutes
         try { if (deliverIssue_(o.id, o.st.subject, r.html, todo[i].email, done)) sent++; }
         catch (err) {
+          if (err && err.rateLimited) break; // try again on the next 10-minute run
           console.error('send to ' + todo[i].email + ' failed: ' + err);
           sendsSheet_().appendRow([new Date(), o.id, o.st.subject, todo[i].email, 'error: ' + err]);
           done[todo[i].email] = true;
@@ -463,7 +515,7 @@ function processSendQueue_() {
         setIssueState_(o.id, o.st);
         try { r.file.moveTo(DriveApp.getFolderById(ISSUES_FOLDER_ID)); } catch (err) { console.error('archive: ' + err); }
         try {
-          MailApp.sendEmail({ to: REVIEW_EMAIL, subject: 'Sent: ' + o.st.subject,
+          sendMail_({ to: REVIEW_EMAIL, subject: 'Sent: ' + o.st.subject,
             body: o.st.subject + ' has gone to all ' + Object.keys(sentTo_(o.id)).length +
               ' subscribers. The Sends tab of the Subscribers sheet lists each one.', name: NEWSLETTER_NAME });
         } catch (err) {}
@@ -505,7 +557,7 @@ function handleSubmit_(p) {
       '<p style="border-left:3px solid #ccc;padding-left:12px;color:#333">' + esc_(blurb) + '</p>' +
       '<p style="color:#777;font-size:13px">Credit by name: ' + credit + '</p>' +
       button_(review, 'Review') + '</div>';
-    MailApp.sendEmail({ to: REVIEW_EMAIL, subject: 'Newsletter suggestion from ' + name,
+    sendMail_({ to: REVIEW_EMAIL, subject: 'Newsletter suggestion from ' + name,
       body: name + ' suggested ' + url + '\n\n' + blurb + '\n\nReview: ' + review,
       htmlBody: html, name: GROUP_NAME });
   } catch (err) { console.error('review email failed: ' + err); }
@@ -560,7 +612,7 @@ function decide(id, t, decision) {
   const name = s.v[2], email = s.v[3];
   if (decision === 'approved' && !wasApproved && email) {
     try {
-      MailApp.sendEmail({ to: email, subject: 'Your suggestion will run in ' + NEWSLETTER_NAME,
+      sendMail_({ to: email, subject: 'Your suggestion will run in ' + NEWSLETTER_NAME,
         body: 'Hi ' + String(name).split(/\s+/)[0] + ',\n\nThanks for sending ' + s.v[4] +
           '. It will appear in an upcoming issue of ' + NEWSLETTER_NAME + '.\n\nDavid',
         name: GROUP_NAME, replyTo: REPLY_TO });
@@ -620,5 +672,5 @@ function setup() {
     if (t.getHandlerFunction() === 'tick') ScriptApp.deleteTrigger(t);
   });
   ScriptApp.newTrigger('tick').timeBased().everyMinutes(10).create();
-  Logger.log('Ready. Mail quota left today: ' + MailApp.getRemainingDailyQuota());
+  Logger.log('Ready. Sending via ' + (cfToken_() ? 'Cloudflare as ' + FROM_ADDRESS : 'this Google account') + '. Quota left today: ' + remainingQuota_());
 }
