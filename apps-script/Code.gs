@@ -41,7 +41,7 @@ const NOTIFY_EMAIL = '';
 
 // Emails to subscribers come from this Google account, replies go to REPLY_TO.
 const SEND_WELCOME = true;
-const REPLY_TO = 'dstonko1@jh.edu';
+const REPLY_TO = 'contact@localminimum.us'; // Cloudflare Email Routing forwards this to dstonko1@gmail.com
 
 // Sending through Cloudflare Email Service when the CF_API_TOKEN script property is set
 // (Project Settings > Script properties). Without it, mail goes through this Google account.
