@@ -176,7 +176,8 @@ function button_(href, label) {
 // Cloudflare delivery failed for every test on 2026-09-28 (beta service), so mail goes through Gmail
 // until this is switched back to true.
 const USE_CLOUDFLARE = false;
-function cfToken_() { return USE_CLOUDFLARE ? PropertiesService.getScriptProperties().getProperty('CF_API_TOKEN') : null; }
+let FORCE_CLOUDFLARE_ = false;
+function cfToken_() { return (USE_CLOUDFLARE || FORCE_CLOUDFLARE_) ? PropertiesService.getScriptProperties().getProperty('CF_API_TOKEN') : null; }
 
 // Emails left today. Cloudflare sets a daily quota that grows with good sending history (200 at
 // the start); when it is reached the send fails and the rest wait for a later run. The Google
@@ -735,3 +736,6 @@ function testSend(to) {
 }
 
 function testSendGmail() { testSend('dstonko1@gmail.com'); }
+
+// Sends one test through Cloudflare regardless of USE_CLOUDFLARE, to check its delivery.
+function testCloudflareGmail() { FORCE_CLOUDFLARE_ = true; testSend('dstonko1@gmail.com'); }
