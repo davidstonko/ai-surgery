@@ -107,6 +107,52 @@ function sign_(value) {
   return Utilities.base64EncodeWebSafe(sig).replace(/=+$/, '').slice(0, 22);
 }
 
+/* ---------- Public archive (localminimum.us/issues/) ----------
+ * Lists every sent issue in the Issues folder (newest copy per issue number) and serves one issue's
+ * HTML without the personal unsubscribe link. Nothing else in Drive is reachable this way. */
+function archiveList_() {
+  const byN = {};
+  const it = DriveApp.getFolderById(ISSUES_FOLDER_ID).getFiles();
+  while (it.hasNext()) {
+    const f = it.next();
+    if (!/\.html?$/i.test(f.getName()) && f.getMimeType() !== MimeType.HTML) continue;
+    const m = f.getName().match(/Issue\s+(\d+)/i);
+    if (!m) continue;
+    const n = Number(m[1]);
+    if (byN[n] && byN[n].getDateCreated() > f.getDateCreated()) continue;
+    byN[n] = f;
+  }
+  return Object.keys(byN).map(Number).sort((x, y) => y - x).map(n => {
+    const html = byN[n].getBlob().getDataAsString('UTF-8');
+    const t = html.match(/font-size:24px[^>]*>([^<]+)</);
+    const d = html.match(/Issue\s+\d+\s*\|\s*([^|<]+?)\s*\|/);
+    return { n: n, id: byN[n].getId(), title: t ? unescape_(t[1]) : '', date: d ? d[1].trim() : '' };
+  });
+}
+
+function archiveCached_() {
+  const c = CacheService.getScriptCache();
+  const hit = c.get('archive_v1');
+  if (hit) return JSON.parse(hit);
+  const list = archiveList_();
+  c.put('archive_v1', JSON.stringify(list), 600);
+  return list;
+}
+
+function archiveIssue_(p) {
+  const n = Number(p.n);
+  const item = archiveCached_().filter(x => x.n === n)[0];
+  if (!item) return json_({ ok: false, error: 'not found' });
+  let html = DriveApp.getFileById(item.id).getBlob().getDataAsString('UTF-8');
+  html = html.replace(/<a href="\{\{UNSUBSCRIBE_URL\}\}"[^>]*>Unsubscribe<\/a>(<br>)?\s*/g, '')
+    .split('{{UNSUBSCRIBE_URL}}').join(SITE_URL + 'subscribe/');
+  return json_({ ok: true, n: n, title: item.title, date: item.date, html: html });
+}
+
+function unescape_(s) {
+  return String(s).replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+}
+
 function unsubToken(email) { return sign_(String(email).toLowerCase()); }
 function reviewToken_(id) { return sign_('review:' + id); }
 function issueToken_(id) { return sign_('issue:' + id); }
@@ -184,6 +230,8 @@ function doGet(e) {
   if (p.action === 'unsubscribe') return handleUnsub_(p);
   if (p.action === 'review') return reviewPage_(p);
   if (p.action === 'issue') return issuePage_(p);
+  if (p.action === 'archive') return json_({ ok: true, issues: archiveCached_() });
+  if (p.action === 'archive_issue') return archiveIssue_(p);
   return page_(GROUP_NAME, 'Service is running.');
 }
 
@@ -515,6 +563,7 @@ function processSendQueue_() {
         o.st.sentAt = new Date().toISOString();
         setIssueState_(o.id, o.st);
         try { r.file.moveTo(DriveApp.getFolderById(ISSUES_FOLDER_ID)); } catch (err) { console.error('archive: ' + err); }
+        try { CacheService.getScriptCache().remove('archive_v1'); } catch (err) {}
         try {
           sendMail_({ to: REVIEW_EMAIL, subject: 'Sent: ' + o.st.subject,
             body: o.st.subject + ' has gone to all ' + Object.keys(sentTo_(o.id)).length +

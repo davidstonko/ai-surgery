@@ -6,10 +6,27 @@ description: Every issue of The Local Minimum, the weekly email on AI in surgery
 ---
 <h1>Past issues</h1>
 <p class="lede">Every issue of The Local Minimum, as sent. <a href="{{ '/subscribe/' | relative_url }}">Subscribe</a> to get the next one by email.</p>
-<ul class="list">
+<ul class="list" id="issues">
   <li>
     <p class="meta">Issue 1 &middot; September 28, 2026</p>
     <h2><a href="{{ '/issues/1/' | relative_url }}">Machines of Loving Grace, two years later</a></h2>
-    <p>Dario Amodei's 2024 essay on what powerful AI could do for biology and medicine, what has happened since, and the counterarguments. Plus Ilya Sutskever on the end of the scaling era.</p>
   </li>
 </ul>
+<script>
+(function () {
+  var EP = "https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec";
+  fetch(EP + "?action=archive").then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok || !d.issues || !d.issues.length) return;
+    var ul = document.getElementById("issues"); ul.innerHTML = "";
+    d.issues.forEach(function (x) {
+      var li = document.createElement("li");
+      var meta = document.createElement("p"); meta.className = "meta";
+      meta.textContent = "Issue " + x.n + (x.date ? " \u00b7 " + x.date : "");
+      var h = document.createElement("h2"); var a = document.createElement("a");
+      a.href = x.n === 1 ? "/issues/1/" : "/issues/read/?n=" + x.n;
+      a.textContent = x.title || ("Issue " + x.n);
+      h.appendChild(a); li.appendChild(meta); li.appendChild(h); ul.appendChild(li);
+    });
+  }).catch(function () {});
+})();
+</script>

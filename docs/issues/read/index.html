@@ -1,0 +1,26 @@
+---
+layout: default
+title: Issue
+nav: library
+description: An issue of The Local Minimum, the weekly email on AI in surgery and medicine by David Stonko.
+sitemap: false
+---
+<p class="meta" id="meta">The Local Minimum</p>
+<p style="margin:0 0 20px"><a href="{{ '/issues/' | relative_url }}">&larr; All issues</a> &middot; <a href="{{ '/subscribe/' | relative_url }}">Get it by email</a></p>
+<div class="issue" id="issue"><p style="padding:24px">Loading&hellip;</p></div>
+<script>
+(function () {
+  var EP = "https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec";
+  var n = parseInt(new URLSearchParams(location.search).get("n"), 10);
+  var box = document.getElementById("issue");
+  if (!n) { box.innerHTML = '<p style="padding:24px">Issue not found. <a href="/issues/">See all issues</a>.</p>'; return; }
+  fetch(EP + "?action=archive_issue&n=" + n).then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok) throw new Error("missing");
+    document.title = "Issue " + d.n + ": " + d.title + " | LocalMinimum.us";
+    document.getElementById("meta").textContent = "The Local Minimum \u00b7 Issue " + d.n + (d.date ? " \u00b7 " + d.date : "");
+    box.innerHTML = d.html;
+  }).catch(function () {
+    box.innerHTML = '<p style="padding:24px">This issue could not be loaded. <a href="/issues/">See all issues</a>.</p>';
+  });
+})();
+</script>
