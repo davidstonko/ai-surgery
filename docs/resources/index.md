@@ -2,7 +2,7 @@
 layout: default
 title: Resources
 nav: resources
-description: Johns Hopkins AI tools and policies, and where to start reading on AI in surgery.
+description: Johns Hopkins AI tools and policies, where to start reading on AI in surgery, how the models work, and what to follow to keep up.
 ---
 # Resources
 
@@ -28,5 +28,25 @@ description: Johns Hopkins AI tools and policies, and where to start reading on 
 
 - **["The Bitter Lesson"](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)**, Richard Sutton, 2019. The one essay to read first.
 - **[Full reading list from the Faculty Development Series talk](../library/2026/09/ai-safety-effectiveness-surgery-resources/)**: history, mechanics, clinical evidence and the key technical papers.
+
+## Learn how it works
+
+The hands-on links from my Grand Rounds talk, AI for Surgeons.
+
+- **[3Blue1Brown, neural networks series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)**: the best visual explanation of how these models work. Start with [episode 1](https://www.youtube.com/watch?v=aircAruvnKk).
+- **[Tiktokenizer](https://tiktokenizer.vercel.app)**: paste in a sentence and see the tokens a model actually reads.
+- **[Transluce observability interface](https://transluce.org/observability-interface)**: look inside a model at the features it uses to answer.
+- **["Building effective agents"](https://www.anthropic.com/engineering/building-effective-agents)**, Anthropic. A plain explanation of what "agentic" means.
+
+## Keep up
+
+What I listen to and read to stay current.
+
+- **[NEJM AI Grand Rounds](https://podcasts.apple.com/us/podcast/nejm-ai-grand-rounds/id1657518313)** (podcast): clinical AI conversations from NEJM AI. The closest thing the field has to a journal club.
+- **[Ground Truths](https://erictopol.substack.com/)**, Eric Topol (newsletter and [podcast](https://erictopol.substack.com/s/podcasts)): medical AI interviews and a steady read on the evidence.
+- **[Dwarkesh Podcast](https://www.dwarkesh.com/)**: long interviews with lab leaders and researchers.
+- **[Latent Space](https://www.latent.space/podcast)** (podcast): how AI is actually built and deployed, from the engineering side.
+- **[SemiAnalysis](https://newsletter.semianalysis.com/about)** (newsletter): chips, data centers and the economics behind them.
+- **[METR time horizons](https://metr.org/time-horizons/)**: how long a task AI agents can finish on their own, updated as new models ship.
 
 </div>
