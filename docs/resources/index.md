@@ -23,6 +23,14 @@ description: Johns Hopkins AI tools and policies, where to start reading on AI i
 - **[JHU Guidelines for Responsible Use of AI](https://it.johnshopkins.edu/ai/guidelines-for-responsible-use-of-ai/)**: the institutional ground rules for everyday AI use.
 - **[Research IT: Artificial Intelligence](https://researchit.jhu.edu/artificial-intelligence/)**: where to start for research uses. IRB approval for PHI/PII work, SIP approval for clinical research.
 - **["Generative AI at Johns Hopkins: What Faculty Need to Know"](https://medicine-matters.blogs.hopkinsmedicine.org/2026/05/generative-ai-at-johns-hopkins-what-faculty-need-to-know/)**: Medicine Matters, May 2026. The faculty-facing summary of current policy.
+- **[Data Science and AI Institute](https://ai.jhu.edu/)**: the university's AI hub, and the place to find collaborators across schools.
+- **[JHU Libraries: Using AI](https://guides.library.jhu.edu/using-AI)**: the library's guide to AI tools for research and writing.
+- **[ARCH condos and colocation](https://www.arch.jhu.edu/about-arch/condos-and-colocation/)**: buy nodes on the Rockfish cluster or rack your own hardware at ARCH, if you want to run models locally.
+
+## Policy and education
+
+- **[FSMB recommendations on AI in clinical practice](https://www.fsmb.org/advocacy/news-releases/fsmb-releases-recommendations-on-the-responsible-and-ethical-incorporation-of-ai-into-clinical-practice/)**: the Federation of State Medical Boards on accountability when physicians use AI tools. The view from the people who license us.
+- **[AAMC AI competencies](https://www.aamc.org/about-us/medical-education/ai-competencies)**: what the AAMC expects learners and educators to be able to do with AI. Useful for anyone building a curriculum.
 
 ## Start here
 
