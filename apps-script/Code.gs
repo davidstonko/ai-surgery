@@ -37,7 +37,7 @@ const ROOT_FOLDER_ID = '1sOS7SsmuA0qQwIC82DNpeZBF38n9p8WI';
 const REVIEW_EMAIL = 'dstonko1@jh.edu';
 
 // Set to an address to get a note for each new sign-up, or leave '' for none.
-const NOTIFY_EMAIL = '';
+const NOTIFY_EMAIL = 'dstonko1@gmail.com';
 
 // Emails to subscribers come from this Google account, replies go to REPLY_TO.
 const SEND_WELCOME = true;
