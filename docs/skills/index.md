@@ -18,11 +18,38 @@ Converts any CV into the Word format that the Advisory Board of the Medical Facu
 
 ## JH Surgery Format
 
-A formatting skill for the Johns Hopkins Department of Surgery (The Johns Hopkins Hospital and Johns Hopkins Bayview). Tell Claude what you are presenting and it builds a branded rough draft you finish yourself: grand rounds and podium decks, conference posters sized to the meeting's spec, journal club, case conferences, abstracts, and letters on department letterhead. It never touches patient information; case-based drafts use bracketed placeholders you fill in on a hospital computer. Type `/jhsurgeryformat` once installed.
+Takes the science, letter or talk you already have and formats it into a rough draft with Hopkins and Department of Surgery branding, following the [published brand standards](https://brand.hopkinsmedicine.org/brand/design-standards) and the surgery templates the department already uses. It does not do any science. It builds grand rounds and podium decks, conference posters sized to the meeting's spec, journal club, case conferences, abstracts, and letters on department letterhead, for The Johns Hopkins Hospital and Johns Hopkins Bayview. It handles logo resolution behind the scenes, so the logo is not grainy when you print the poster at FedEx. Case-based drafts use bracketed placeholders you fill in on a hospital computer.
 
 **[Download jhsurgeryformat.zip](https://github.com/davidstonko/jh-surgery-format/raw/main/jhsurgeryformat.zip)** &middot; [Source on GitHub](https://github.com/davidstonko/jh-surgery-format)
 
-No install needed for a one-off: download [JH-Surgery-Format.md](https://github.com/davidstonko/jh-surgery-format/raw/main/JH-Surgery-Format.md) and attach it to a Claude chat.
+Installed, you type `/jhsurgeryformat` in any chat, answer two or three questions, and get back a real PowerPoint or Word file with the Hopkins logos embedded and clearly marked blanks where your content goes. To skip the install, paste this into Claude instead:
+
+```
+Fetch https://raw.githubusercontent.com/davidstonko/jh-surgery-format/main/JH-Surgery-Format.md and follow it as my formatting skill.
+```
+
+### Three things to try with your own files
+
+Each prompt works with or without the skill installed (on the free plan, do step 1 of the install steps below first).
+
+1. **A letter on letterhead.** Attach a recommendation letter you already wrote in Word:
+   ```
+   Put this letter on department letterhead using the /jhsurgeryformat skill (if it isn't installed, fetch and follow https://raw.githubusercontent.com/davidstonko/jh-surgery-format/main/JH-Surgery-Format.md).
+   ```
+   It asks whether you want personalized or general letterhead, matches the official JHM stationery standards, and tells you how to print it.
+2. **A poster from an accepted abstract.** Attach the Word file of the abstract you submitted:
+   ```
+   Build an ACS Clinical Congress poster draft from this abstract using the /jhsurgeryformat skill (if it isn't installed, fetch and follow https://raw.githubusercontent.com/davidstonko/jh-surgery-format/main/JH-Surgery-Format.md).
+   ```
+   It looks up the meeting's size requirements itself and gives you a rough draft to finish in PowerPoint.
+3. **A talk from a prior institution.** Attach the old deck:
+   ```
+   I built this presentation when I was at my prior institution, but now I am at JHH; strip the old branding and convert the whole thing to Hopkins format using the /jhsurgeryformat skill (if it isn't installed, fetch and follow https://raw.githubusercontent.com/davidstonko/jh-surgery-format/main/JH-Surgery-Format.md), without changing any content.
+   ```
+
+### Why a skill beats prompting from scratch
+
+An installed skill costs one line of context until you call it, and because its text is identical every session it is served from the model's prompt cache instead of being reprocessed. House colors, slide geometry, logo rules and per-format structures are already worked out, so drafts converge in one or two turns instead of a long revision cycle. Attaching an old deck as a style example costs 10 to 100 times more tokens every time. And because the brand standards are built in, the lazy path and the correct path are the same path.
 
 ## Suggest a skill
 
@@ -31,8 +58,10 @@ Know of a Claude skill that might be important to surgeons or physicians, or one
 ## How to install a skill
 
 1. In Claude, turn on code execution: **Settings > Capabilities** (Team and Enterprise plans: your admin enables it under Organization settings).
-2. Go to **Customize > Skills**, click **+**, choose **Create skill**, then **Upload a skill**, and select the ZIP file. Don't unzip it first.
+2. Go to **Customize > Skills**, click **+**, choose **Create skill**, then **Upload a skill**, and select the ZIP file. Don't unzip it first; if your browser unzipped it automatically, right-click the folder and choose Compress to get the ZIP back.
 3. Start a new chat and ask for the task. Claude uses the skill when the request matches.
+
+Claude works in a browser; the desktop app is optional, and the free plan is enough to try these. Never give Claude or any online AI patient information.
 
 More of my code, including research tools, is on [GitHub](https://github.com/davidstonko).
 
