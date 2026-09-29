@@ -249,6 +249,35 @@ function doGet(e) {
 function tick() {
   try { checkOutbox_(); } catch (err) { console.error('outbox: ' + err); }
   try { processSendQueue_(); } catch (err) { console.error('send queue: ' + err); }
+  try { catchUpLatest_(); } catch (err) { console.error('catch-up: ' + err); }
+}
+
+// Every active subscriber should have the newest issue. If the copy sent at sign-up failed (for
+// example a momentary sending error), send it now. Matches on the issue number in the Sends log, so
+// people who already got that issue in an earlier revision are not sent it again.
+function catchUpLatest_() {
+  const latest = latestIssue_();
+  if (!latest) return;
+  const m = String(latest.subject).match(/Issue\s+(\d+)/i);
+  if (!m) return;
+  const re = new RegExp('Issue\\s+' + m[1] + '\\b', 'i');
+  const got = {};
+  const ss = sendsSheet_();
+  if (ss.getLastRow() > 1) {
+    ss.getRange(2, 1, ss.getLastRow() - 1, SENDS_HEADERS.length).getValues().forEach(r => {
+      if (r[4] === 'sent' && re.test(String(r[2]))) got[String(r[3]).toLowerCase()] = true;
+    });
+  }
+  const sh = sheet_(SUBS_SHEET_ID, SUBS_HEADERS);
+  if (sh.getLastRow() < 2) return;
+  const rows = sh.getRange(2, 1, sh.getLastRow() - 1, SUBS_HEADERS.length).getValues();
+  const done = sentTo_(latest.id);
+  for (let i = 0; i < rows.length; i++) {
+    const email = String(rows[i][2]).toLowerCase();
+    if (rows[i][4] !== 'subscribed' || !email || got[email]) continue;
+    try { deliverIssue_(latest.id, latest.subject, latest.html, email, done); }
+    catch (err) { console.error('catch-up ' + email + ': ' + err); if (err.rateLimited) break; }
+  }
 }
 
 /* ---------- Sign-up ---------- */
