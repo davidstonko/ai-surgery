@@ -32,6 +32,8 @@ h1 { font-size: 36px; margin: 0 0 12px; }
 .meta { font-size: 14px; color: var(--muted); margin: 0 0 8px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
 
 .prose h2 { font-size: 25px; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+.prose hr { border: 0; border-top: 3px solid var(--accent); margin: 56px 0 0; }
+.prose hr + h2 { border-top: 0; padding-top: 0; margin-top: 28px; }
 .prose h3 { font-size: 20px; margin: 28px 0 8px; }
 .prose p { margin: 0 0 16px; }
 .prose ul { padding-left: 20px; margin: 0 0 20px; }
