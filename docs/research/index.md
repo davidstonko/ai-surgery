@@ -2,7 +2,8 @@
 layout: default
 title: Research and Tools
 nav: research
-description: David Stonko's research on outcomes and applied machine learning in vascular surgery, and open research tools.
+description: "David Stonko's research on open aortic surgery, carotid revascularization, vascular trauma and machine learning in surgery, with open research tools."
+head_title: "Research: Vascular Surgery and Machine Learning | David Stonko, MD, MS"
 ---
 # Research and tools
 

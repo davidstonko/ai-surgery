@@ -3,6 +3,7 @@ layout: default
 title: Resources
 nav: resources
 description: Johns Hopkins AI tools and policies, where to start reading on AI in surgery, how the models work, and what to follow to keep up.
+head_title: "AI Resources for Surgeons | LocalMinimum.us"
 ---
 # Resources
 
