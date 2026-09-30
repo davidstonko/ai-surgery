@@ -132,7 +132,7 @@ Stonko DP, Goldsborough E, Kibrik P, Zhang G, Holscher CM, Hicks CW. "Use of tra
 
 TCAR was cleared by the FDA in 2015. Using the Vascular Quality Initiative, we tracked 108,676 carotid revascularizations over its first five years. Endarterectomy fell from 84.9% of cases to 64.8%, while TCAR rose from 0.8% to 21.9%, overtaking transfemoral stenting. The shift was largest in high-risk patients, and high-risk status was the strongest predictor of choosing TCAR.
 
-More of my carotid work:
+More of my carotid revascularization work:
 
 - Stonko DP, et al. "Association of year of surgery and carotid stenting outcomes in high-risk patients, 2015-2021." *JAMA Surg* 2023;158(7):768-769. [Paper](https://doi.org/10.1001/jamasurg.2022.8384)
 - Stonko DP, et al. "Automatic 1-year follow-up appointment creation and reminders can improve long-term follow-up after carotid revascularization." *Am J Surg* 2024;227:57-62. [Paper](https://doi.org/10.1016/j.amjsurg.2023.09.032)
