@@ -11,7 +11,7 @@ head_title: "Research: Vascular Surgery and Machine Learning | David Stonko, MD,
 
 <div class="prose" markdown="1">
 
-Publications are on [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en). The [research tools](#tools) further down are open source and free to use for research.
+Publications are on [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en). The [research tools](#tools) further down are open source and free to use for research. My medical device work is on the [MedTech Work](../medtech/) page.
 
 <hr>
 
