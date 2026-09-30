@@ -18,14 +18,14 @@ Publications are on [Google Scholar](https://scholar.google.com/citations?user=6
 
 ### Classical ML research work
 
-Before large language models, my machine learning work used neural networks, classical ML and large registry datasets to predict patient outcomes, including some examples below like predicting tumor grade, surgical outcomes and trauma center workload.
-
-#### Neural networks outperform CT grading for pediatric TBI outcomes
-
 <figure class="paper-cover">
 <a href="https://thejns.org/focus/view/journals/neurosurg-focus/45/5/neurosurg-focus.45.issue-5.xml"><img src="{{ '/assets/research/nsfocus-45-5-cover.jpg' | relative_url }}" alt="Cover of Neurosurgical Focus, November 2018, showing the neural network diagram from this paper: nine input variables, a layer of training nodes, and a favorable versus unfavorable outcome" width="240" height="320" loading="lazy"></a>
 <figcaption>My neural network diagram became the cover art of the November 2018 issue, <em>Neurosurgical Focus</em>, Predictive Analytics in Medicine.</figcaption>
 </figure>
+
+Before large language models, my machine learning work used neural networks, classical ML and large registry datasets to predict patient outcomes, including some examples below like predicting tumor grade, surgical outcomes and trauma center workload.
+
+#### Neural networks outperform CT grading for pediatric TBI outcomes
 
 Hale AT, Stonko DP, et al. "Machine-learning analysis outperforms conventional statistical models and CT classification systems in predicting 6-month outcomes in pediatric patients sustaining traumatic brain injury." *Neurosurg Focus* 2018;45(5):E2. [Paper](https://thejns.org/focus/view/journals/neurosurg-focus/45/5/article-pE2.xml)
 
