@@ -111,6 +111,52 @@ More of my carotid work:
 - Bose S, Stonko DP, et al. "Females are less likely to receive best medical therapy for stroke prevention before and after carotid revascularization than males." *J Vasc Surg* 2023;77(3):786-794. [Paper](https://doi.org/10.1016/j.jvs.2022.09.028)
 - Holscher CM, Dun C, Wu YHA, White M, Stonko DP, et al. "Impact of the 2023 Centers for Medicare & Medicaid Services policy change on carotid artery stenting use among Medicare beneficiaries." *Surgery* 2025;187:109622. [Paper](https://doi.org/10.1016/j.surg.2025.109622)
 
+<hr class="sub">
+
+### Vascular trauma
+
+A major focus of my research has been optimizing the management of vascular and traumatic emergencies. I have published more than a dozen journal articles and book chapters on vascular trauma alone. Three of my first-author papers are cited in the [2025 ESVS Clinical Practice Guidelines on the Management of Vascular Trauma](https://doi.org/10.1016/j.ejvs.2024.12.018), informing recommendations on synthetic interposition grafts for vascular injury, management of major abdominal vascular trauma, and postoperative antiplatelet therapy. Seeing my work in these guidelines has been rewarding, because it helps other surgeons manage their patients too.
+
+#### Cited in the 2025 ESVS guidelines
+
+All three come from PROOVIT, the American Association for the Surgery of Trauma's prospective multicenter vascular injury registry.
+
+- Stonko DP, Betzold RD, Abdou H, et al. "In-hospital outcomes in autogenous vein versus synthetic graft interposition for traumatic arterial injury: a propensity-matched cohort from PROOVIT." *J Trauma Acute Care Surg* 2022;92(2):407-412. [Paper](https://doi.org/10.1097/TA.0000000000003465)
+- Stonko DP, Azar FK, Betzold RD, et al. "Contemporary management and outcomes of injuries to the inferior vena cava: a prospective multicenter trial from PROspective Observational Vascular Injury Treatment." *Am Surg* 2023;89(4):714-719. [Paper](https://doi.org/10.1177/00031348211038556)
+- Stonko DP, Betzold RD, Azar FK, et al. "Postoperative antiplatelet and/or anticoagulation use does not impact complication or reintervention rates after vein repair of arterial injury: a PROOVIT study." *Vascular* 2023;31(4):777-783. [Paper](https://doi.org/10.1177/17085381221082371)
+
+#### Other clinical studies
+
+- Chipman AM, Ottochian M, Ricaurte D, Gunter G, DuBose JJ, Stonko DP, et al. "Contemporary management and time to revascularization in upper extremity arterial injury." *Vascular* 2023;31(2):284-291. [Paper](https://doi.org/10.1177/17085381211062726)
+- Siddiqi N, Lammers D, Hu P, Stonko D, et al. "Comparison of contralateral vs ipsilateral vein graft for traumatic vascular injury repair: a cohort from PROOVIT." *Am Surg* 2024;90:2310-2313.
+- Abdou H, Treffalls RN, Stonko DP, et al. "Endovascular stenting techniques for blunt carotid injury." *Vascular* 2024;32(5):1055-1062. [Paper](https://doi.org/10.1177/17085381231193062)
+- Patel N, Harfouche M, Stonko DP, et al. "Factors associated with increased mortality in severe abdominopelvic injury." *Shock* 2022;57(2):175-180. [Paper](https://doi.org/10.1097/SHK.0000000000001851)
+- Edwards J, Treffalls RN, Abdou H, Stonko DP, et al. "Lower Extremity Staged Revascularization (LESR) as a new innovative concept for lower extremity salvage in acute popliteal artery injuries: a hypothesis." *Patient Saf Surg* 2022;16(1):39. [Paper](https://doi.org/10.1186/s13037-022-00349-2)
+- Dvir M, Jodlowski G, Stonko DP, et al. "A proposed clinical guide to delivering Lower Extremity Extracorporeal Distal Revascularization (LEEDR) as a bridge to definitive care in acute limb ischemia." *Perfusion* 2026;41(3):254-259. [Paper](https://doi.org/10.1177/02676591251363374)
+
+<details markdown="1">
+<summary>Large animal and translational studies (17)</summary>
+
+- Stonko DP, Patel N, Edwards J, et al. "A swine model of reproducible timed induction of peripheral arterial shunt failure: developing warning signs of imminent shunt failure." *JVS Vasc Sci* 2022;3:285-291. [Paper](https://doi.org/10.1016/j.jvssci.2022.07.001)
+- Edwards J, Stonko DP, Abdou H, et al. "Lower extremity extracorporeal distal revascularization in a swine model of prolonged extremity ischemia." *Ann Vasc Surg* 2023;89:293-301. [Paper](https://doi.org/10.1016/j.avsg.2022.09.060)
+- Treffalls RN, Jodlowski G, Wilken S, Stonko DP, et al. "Lower extremity extracorporeal distal revascularization (LEEDR) as a novel approach to limb salvage following prolonged ischemia." *Sci Rep* 2025;15:32802. [Paper](https://doi.org/10.1038/s41598-025-17820-6)
+- Stonko DP, Edwards J, Abdou H, et al. "The underlying cardiovascular mechanisms of resuscitation and injury of REBOA and partial REBOA." *Front Physiol* 2022;13:871073. [Paper](https://doi.org/10.3389/fphys.2022.871073)
+- Edwards J, Abdou H, Stonko DP, et al. "Partial vs full resuscitative endovascular balloon occlusion of the aorta (REBOA) in a swine model of raised intracranial pressure and hemorrhagic shock." *J Am Coll Surg* 2023;236(1):241-252. [Paper](https://doi.org/10.1097/XCS.0000000000000403)
+- Madurska MJ, Abdou H, Elansary NN, Edwards J, Patel N, Stonko DP, et al. "Whole blood selective aortic arch perfusion for exsanguination cardiac arrest: assessing myocardial tolerance to the duration of cardiac arrest." *Shock* 2022;57(6):243-250. [Paper](https://doi.org/10.1097/SHK.0000000000001946)
+- Elansary NN, Stonko DP, Treffalls RN, et al. "Class of hemorrhagic shock is associated with progressive diastolic coronary flow reversal and diminished left ventricular function." *Front Physiol* 2022;13:1033784. [Paper](https://doi.org/10.3389/fphys.2022.1033784)
+- Treffalls RN, Stonko DP, Edwards J, et al. "Characterization of the mesenteric circulatory physiology during hemorrhagic shock in a swine model." *Surg Pract Sci* 2022;10:100119. [Paper](https://doi.org/10.1016/j.sipas.2022.100119)
+- Stonko DP, Edwards J, Abdou H, et al. "Raising systemic blood pressure to delay irreversible intestinal ischemia in a swine model of proximal superior mesenteric artery occlusion." *J Surg Res* 2024;295:70-80. [Paper](https://doi.org/10.1016/j.jss.2023.09.076)
+- Banaskiewicz K, Treffalls R, Wilken S, Stonko DP, et al. "Performance of open versus endovascular approaches in swine modeling of acute mesenteric ischemia." *Vascular* 2026;34(2):351-356. [Paper](https://doi.org/10.1177/17085381251339240)
+- Stonko DP, Treffalls RN, Edwards J, et al. "How to TEVAR swine for scientific research: technical, anatomic, and device considerations to translate human TEVAR techniques into the large animal laboratory." *Vascular* 2024;32(4):728-736. [Paper](https://doi.org/10.1177/17085381231162121)
+- Stonko DP, Edwards J, Abdou H, et al. "Thoracic endovascular aortic repair acutely augments left ventricular biomechanics in an animal model: a mechanism for postoperative heart failure and hypertension." *Ann Vasc Surg* 2023;97:18-26. [Paper](https://doi.org/10.1016/j.avsg.2023.04.007)
+- Stonko DP, Edwards J, Abdou H, et al. "A technical and data analytic approach to pressure-volume loops over numerous cardiac cycles." *JVS Vasc Sci* 2022;3:73-84. [Paper](https://doi.org/10.1016/j.jvssci.2021.12.003)
+- Stonko DP, Rousseau MC, Price C, et al. "Technical and analytical approach to biventricular pressure-volume loops in swine including a completely endovascular, percutaneous closed-chest large animal model." *JVS Vasc Sci* 2024;5:100190. [Paper](https://doi.org/10.1016/j.jvssci.2024.100190)
+- Gerling KA, Stonko DP, Xun H, et al. "A novel sutureless anastomotic device in a swine model: a proof of concept study." *J Surg Res* 2023;291:116-123. [Paper](https://doi.org/10.1016/j.jss.2023.04.012)
+- Treffalls RN, Poe K, Abdou H, Stonko DP, et al. "Exploring intra-arterial contrast administration for intraoperative imaging using a swine model." *Angiology* 2025;76(9):833-840. [Paper](https://doi.org/10.1177/00033197231155225)
+- Treffalls RN, Lubas M, Morrison JJ, Stonko DP. "Autologous blood resuscitation for large animals in a research setting using the Hemafuse device: preliminary data of device use for controlled and real-world hemorrhage." *Front Vet Sci* 2022;9:1069420. [Paper](https://doi.org/10.3389/fvets.2022.1069420)
+
+</details>
+
 <hr>
 
 ## Tools
