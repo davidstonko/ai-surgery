@@ -113,7 +113,7 @@ This is early work. The preprint lays out the framework and checks the math agai
 
 ### Open thoracoabdominal aortic aneurysm repair
 
-Open thoracoabdominal repair is among the largest operations in vascular surgery, and spinal cord ischemia is its most feared complication. I have trained and worked with Dr. James H. Black III, a world expert in this operation, and our work looks at how it is sequenced and monitored at Johns Hopkins. We care for a large population of patients with connective tissue disorders (Marfan, Ehlers-Danlos and Loeys-Dietz syndromes), so we continue to do a high volume of open thoracoabdominal surgery even as these cases become rarer nationally.
+Open thoracoabdominal repair is among the largest operations in vascular surgery, and spinal cord ischemia is its most feared complication. I have trained and worked with [Dr. James H. Black III](https://profiles.hopkinsmedicine.org/provider/james-hamilton-black-iii/2706000), a world expert in this operation, and with [Dr. Caitlin W. Hicks](https://profiles.hopkinsmedicine.org/provider/caitlin-hicks/2706850), and our work through the [Johns Hopkins Aortic Center](https://www.hopkinsmedicine.org/heart-vascular-institute/cardiac-surgery/aortic-center) looks at how it is sequenced and monitored. We care for a large population of patients with connective tissue disorders (Marfan, Ehlers-Danlos and Loeys-Dietz syndromes), so we continue to do a high volume of open thoracoabdominal surgery even as these cases become rarer nationally.
 
 - Stonko DP, Aru RG, Tan LT, et al. "Open thoracoabdominal aortic reconstruction with distal aortic perfusion: a bottom-up approach is safe in selected patients." *Ann Vasc Surg* 2026. [Paper](https://doi.org/10.1016/j.avsg.2026.09.021)
 
@@ -127,7 +127,7 @@ Open thoracoabdominal repair is among the largest operations in vascular surgery
 
 ### Carotid revascularization
 
-I have done research with Dr. Caitlin W. Hicks, an internationally recognized expert in carotid revascularization and public health, on a number of projects.
+I have done research with [Dr. Caitlin W. Hicks](https://profiles.hopkinsmedicine.org/provider/caitlin-hicks/2706850), an internationally recognized expert in carotid revascularization and public health, on a number of projects.
 
 Stonko DP, Goldsborough E, Kibrik P, Zhang G, Holscher CM, Hicks CW. "Use of transcarotid artery revascularization, transfemoral carotid artery stenting, and carotid endarterectomy in the US from 2015 to 2019." *JAMA Netw Open* 2022;5(9):e2231944. [Paper](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2796354)
 
