@@ -12,7 +12,7 @@
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; border-top: 4px solid #F1C400; background: var(--bg); color: var(--ink); font: 17px/1.65 Arial, "Helvetica Neue", Helvetica, sans-serif; }
 a { color: var(--accent); text-underline-offset: 2px; }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
 
 .top { background: var(--card); border-bottom: 1px solid var(--line); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
@@ -39,8 +39,14 @@ h1 { font-size: 36px; margin: 0 0 12px; }
 .paper-fig { margin: 8px 0 16px; }
 .paper-cover figcaption, .paper-fig figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
 .paper-cover.paper-side { width: 220px; }
+.paper-cover.poster-zoom { width: 300px; position: relative; z-index: 1; }
+.poster-zoom img { transition: transform .25s ease, box-shadow .25s ease; transform-origin: top right; }
+@media (hover: hover) and (min-width: 900px) {
+  .poster-zoom:hover { z-index: 20; }
+  .poster-zoom:hover img { transform: scale(2.6); box-shadow: 0 12px 40px rgba(0,0,0,.28); }
+}
 .clear { clear: both; }
-@media (max-width: 560px) { .paper-cover, .paper-cover.paper-side { float: none; width: 60%; margin: 8px auto 16px; } }
+@media (max-width: 560px) { .paper-cover, .paper-cover.paper-side { float: none; width: 60%; margin: 8px auto 16px; } .paper-cover.poster-zoom { float: none; width: 100%; margin: 8px 0 16px; } }
 .prose hr.sub { border-top: 1px solid var(--line); margin: 40px 0 0; }
 .prose hr + h3 { margin-top: 24px; }
 .prose h2 + h3 { margin-top: 12px; }

@@ -94,11 +94,18 @@ Research use only. Not a regulated medical device.
 
 ### DFWC wound healing calculator
 
+<figure class="paper-cover poster-zoom">
+<a href="{{ '/assets/research/dfwc-evs-2026-poster.pdf' | relative_url }}"><img src="{{ '/assets/research/dfwc-evs-2026-poster.jpg' | relative_url }}" alt="Poster: Data Visualization and Prediction of DFU Healing. WIfI component outperforms the composite stage, and more sophisticated models aren't much better. Eastern Vascular Society 2026." width="1400" height="1225" loading="lazy"></a>
+<figcaption>Poster, Eastern Vascular Society 40th Annual Meeting, September 2026. <a href="{{ '/assets/research/dfwc-evs-2026-poster.pdf' | relative_url }}">Open the PDF</a>.</figcaption>
+</figure>
+
 Estimates the probability that a diabetic foot ulcer heals within 180 days, from four variables available at the first visit, including toe location, University of Texas stage and WIfI wound grade. Developed on 1,141 ulcers from 387 patients at the Johns Hopkins Diabetic Foot and Wound Center and reported per TRIPOD+AI.
 
 **[Open the calculator](https://davidstonko.github.io/dfwc-calc/)** &middot; [Source on GitHub](https://github.com/davidstonko/dfwc-calc)
 
 For research and education only. Not for clinical decision-making.
+
+<div class="clear"></div>
 
 ### More code
 
