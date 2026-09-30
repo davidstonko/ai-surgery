@@ -27,11 +27,6 @@ description: Johns Hopkins AI tools and policies, where to start reading on AI i
 - **[JHU Libraries: Using AI](https://guides.library.jhu.edu/using-AI)**: the library's guide to AI tools for research and writing.
 - **[ARCH condos and colocation](https://www.arch.jhu.edu/about-arch/condos-and-colocation/)**: buy nodes on the Rockfish cluster or rack your own hardware at ARCH, if you want to run models locally.
 
-## Start here
-
-- **["The Bitter Lesson"](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)**, Richard Sutton, 2019. The one essay to read first.
-- **[Full reading list from the Faculty Development Series talk](../library/2026/09/ai-safety-effectiveness-surgery-resources/)**: history, mechanics, clinical evidence and the key technical papers.
-
 ## AI in medicine
 
 The clinical evidence, and the rules we practice under.
@@ -45,6 +40,8 @@ The clinical evidence, and the rules we practice under.
 
 The technical side, from first principles to how the tools get built. Most of these are the hands-on links from my Grand Rounds talk, AI for Surgeons.
 
+- **[Full reading list from the Faculty Development Series talk](../library/2026/09/ai-safety-effectiveness-surgery-resources/)**: history, mechanics, clinical evidence and the key technical papers.
+- **["The Bitter Lesson"](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)**, Richard Sutton, 2019: why general methods that scale with computing power keep beating methods built on human expertise. The short essay behind how the field thinks about progress.
 - **[3Blue1Brown, neural networks series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)**: the best visual explanation of how these models work. Start with [episode 1](https://www.youtube.com/watch?v=aircAruvnKk).
 - **[Tiktokenizer](https://tiktokenizer.vercel.app)**: paste in a sentence and see the tokens a model actually reads.
 - **[Transluce observability interface](https://transluce.org/observability-interface)**: look inside a model at the features it uses to answer.
