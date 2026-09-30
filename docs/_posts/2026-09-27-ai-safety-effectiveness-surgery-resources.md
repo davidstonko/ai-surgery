@@ -35,7 +35,7 @@ A few were skipped due to time constraints.
 - **[AI de-skilling is measurable](https://doi.org/10.1016/S2468-1253(25)00133-5)**: Budzyń et al., *Lancet Gastroenterology & Hepatology* 2025. After routine AI-assisted colonoscopy, experienced endoscopists' unassisted adenoma detection fell from 28.4% to 22.4%. Keep your unassisted reps.
 - **[General-purpose LLMs outperform specialized clinical AI tools](https://doi.org/10.1038/s41591-026-04431-5)**: Vishwanath et al., *Nature Medicine* 2026. Benchmark comparison showing frontier general models beating purpose-built clinical AI. [Companion paper on physicians' real-world questions](https://www.nature.com/articles/s41591-026-04457-9).
 
-## 4. The most important technical AI papers of the last decade
+## 4. The most important technical LLM related AI papers of the last decade
 
 My opinion; all free.
 
