@@ -44,4 +44,6 @@ I have worked with device and digital health companies at every stage, from earl
 - Large animal studies and STTR preparation for a new class of devices to treat extremity ischemia.
 - Co-developing a vascular isolation and perfusion device through institutional technology transfer.
 
+If you would like to discuss consulting or medtech investing, please [reach out through my contact page](../contact/).
+
 </div>
