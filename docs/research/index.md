@@ -185,7 +185,7 @@ An open-source MATLAB pipeline that takes a contrast-enhanced CT angiogram, segm
 
 **Work in progress.** This is under active development and not yet validated. Features, outputs and code will change.
 
-**[Source on GitHub](https://github.com/davidstonko/aortic-segmenter-and-surgery-planner)**
+**[Project page](evar-planner/)** &middot; [Source on GitHub](https://github.com/davidstonko/aortic-segmenter-and-surgery-planner)
 
 Research use only. Not a regulated medical device.
 
