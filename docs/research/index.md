@@ -24,7 +24,7 @@ Before large language models, my machine learning work used neural networks, cla
 
 <figure class="paper-cover">
 <a href="https://thejns.org/focus/view/journals/neurosurg-focus/45/5/neurosurg-focus.45.issue-5.xml"><img src="{{ '/assets/research/nsfocus-45-5-cover.jpg' | relative_url }}" alt="Cover of Neurosurgical Focus, November 2018, showing the neural network diagram from this paper: nine input variables, a layer of training nodes, and a favorable versus unfavorable outcome" width="240" height="320" loading="lazy"></a>
-<figcaption>Our network diagram became the cover of the November 2018 issue, Predictive Analytics in Medicine.</figcaption>
+<figcaption>My neural network diagram became the cover art of the November 2018 issue, <em>Neurosurgical Focus</em>, Predictive Analytics in Medicine.</figcaption>
 </figure>
 
 Hale AT, Stonko DP, et al. "Machine-learning analysis outperforms conventional statistical models and CT classification systems in predicting 6-month outcomes in pediatric patients sustaining traumatic brain injury." *Neurosurg Focus* 2018;45(5):E2. [Paper](https://thejns.org/focus/view/journals/neurosurg-focus/45/5/article-pE2.xml)
