@@ -129,13 +129,16 @@ Most use data from PROOVIT, the American Association for the Surgery of Trauma's
 - Siddiqi N, Lammers D, Hu P, Stonko DP, et al. "Comparison of contralateral vs ipsilateral vein graft for traumatic vascular injury repair: a cohort from PROOVIT." *Am Surg* 2024;90(9):2310-2313. [Paper](https://doi.org/10.1177/00031348241246167)
 - Chipman AM, Ottochian M, Ricaurte D, Gunter G, DuBose JJ, Stonko DP, et al. "Contemporary management and time to revascularization in upper extremity arterial injury." *Vascular* 2023;31(2):284-291. [Paper](https://doi.org/10.1177/17085381211062726)
 
-#### Other clinical studies
+<details markdown="1">
+<summary>Other clinical vascular trauma studies (5)</summary>
 
 - Abdou H, Edwards J, Stonko DP, et al. "The role of endovascular repair of popliteal arterial injuries in the acute setting." *Ann Vasc Surg* 2022;87:522-528. [Paper](https://doi.org/10.1016/j.avsg.2022.05.040)
 - Abdou H, Treffalls RN, Stonko DP, et al. "Endovascular stenting techniques for blunt carotid injury." *Vascular* 2024;32(5):1055-1062. [Paper](https://doi.org/10.1177/17085381231193062)
 - Patel N, Harfouche M, Stonko DP, et al. "Factors associated with increased mortality in severe abdominopelvic injury." *Shock* 2022;57(2):175-180. [Paper](https://doi.org/10.1097/SHK.0000000000001851)
 - Edwards J, Treffalls RN, Abdou H, Stonko DP, et al. "Lower Extremity Staged Revascularization (LESR) as a new innovative concept for lower extremity salvage in acute popliteal artery injuries: a hypothesis." *Patient Saf Surg* 2022;16(1):39. [Paper](https://doi.org/10.1186/s13037-022-00349-2)
 - Dvir M, Jodlowski G, Stonko DP, et al. "A proposed clinical guide to delivering Lower Extremity Extracorporeal Distal Revascularization (LEEDR) as a bridge to definitive care in acute limb ischemia." *Perfusion* 2026;41(3):254-259. [Paper](https://doi.org/10.1177/02676591251363374)
+
+</details>
 
 <details markdown="1">
 <summary>Large animal and translational studies (17)</summary>
