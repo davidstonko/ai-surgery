@@ -21,7 +21,6 @@ head_title: "AI Resources for Surgeons | LocalMinimum.us"
 ### From the newsletter
 
 - **Issue 1:** [Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace), Dario Amodei's essay on what powerful AI could do for biology and medicine, and [Ilya Sutskever on the Dwarkesh Podcast](https://www.youtube.com/watch?v=aR20FWCCjAs).
-- **Issue 2:** Dr. Marissa Famularo's [free literature digest prompt](https://statup.app/briefing.html), and [Dr. Xiao Liu on evaluating medical AI](https://ai-podcast.nejm.org/e/beyond-the-hype-dr-xiao-liu-on-evaluating-medical-ai/) on NEJM AI Grand Rounds.
 
 ## Johns Hopkins AI resources
 
@@ -75,7 +74,7 @@ Questions I ask before trusting a model, whether it is in a journal or a sales p
 The reporting guidelines are the formal version of these questions:
 
 - **[TRIPOD+AI](https://doi.org/10.1136/bmj-2023-078378)** (BMJ 2024): prediction models built with regression or machine learning.
-- **[CONSORT-AI](https://doi.org/10.1038/s41591-020-1034-x)** and **[SPIRIT-AI](https://doi.org/10.1038/s41591-020-1037-7)** (Nature Medicine 2020): trials of AI interventions, and their protocols. Dr. Xiao Liu, featured in Issue 2, was first author on CONSORT-AI.
+- **[CONSORT-AI](https://doi.org/10.1038/s41591-020-1034-x)** and **[SPIRIT-AI](https://doi.org/10.1038/s41591-020-1037-7)** (Nature Medicine 2020): trials of AI interventions, and their protocols.
 - **[DECIDE-AI](https://doi.org/10.1038/s41591-022-01772-9)** (Nature Medicine 2022): early clinical evaluation of AI decision support.
 
 ## How AI works
