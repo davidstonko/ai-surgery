@@ -51,6 +51,8 @@ h1 { font-size: 36px; margin: 0 0 12px; }
 .prose hr + h3 { margin-top: 24px; }
 .prose h2 + h3 { margin-top: 12px; }
 .prose h4 { font-size: 18px; margin: 28px 0 8px; }
+.prose details { margin: 8px 0 20px; }
+.prose details summary { cursor: pointer; font-weight: 600; color: var(--accent); margin: 0 0 12px; }
 .prose h3 { font-size: 20px; margin: 28px 0 8px; }
 .prose p { margin: 0 0 16px; }
 .prose ul { padding-left: 20px; margin: 0 0 20px; }
