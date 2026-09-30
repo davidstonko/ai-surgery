@@ -65,11 +65,18 @@ I did the ML programming. Working in MATLAB from six features a neuroradiologist
 
 <hr class="sub">
 
-### Current work: Anatomically informed neural networks (AINN)
+### Current work: Anatomy-informed neural networks (AINN)
 
-Physics-informed neural networks (PINNs) build known physical laws into how a network is trained, so a model is penalized for predictions that break physics. That lets them learn from less data and behave more sensibly outside the data they were trained on.
+Deep learning models of anatomy can give answers that are numerically plausible but anatomically impossible, and they generalize poorly when data are scarce, which is the usual situation in surgery. Physics-informed neural networks (PINNs) handle the same problem in engineering by building known physical laws into training. AINN does the same with anatomy, in two ways:
 
-I am working on the anatomic analogue: using what we already know about human anatomy to constrain neural networks in the same way that PINNs use known physics. More here as the work matures.
+- **Soft priors** enter the loss as penalties. A renal transplant artery arising from the iliac instead of the aorta is treated as unexpected, not impossible.
+- **Hard priors**, such as the continuity of a vessel, are built into the architecture, so predictions that break them cannot happen by construction.
+
+The first test case is how the aortoiliac tree deforms when a stiff wire is passed through it. That matters in aortic surgery now and will matter for autonomous endovascular navigation. The model couples the wire and the vessel in 3D and is supervised against the 2D angiogram, so ordinary angiograms can train a 3D prediction.
+
+This is early work. The preprint lays out the framework and checks the math against known ground truth; no network has been trained yet. Next is moving from simulation to real CT scans, to test whether the anatomic priors improve accuracy and reduce the training data needed.
+
+**[Read the preprint on arXiv](https://arxiv.org/abs/2608.21332)** &middot; Stonko DP. "Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation." arXiv:2608.21332, August 2026.
 
 <hr>
 
