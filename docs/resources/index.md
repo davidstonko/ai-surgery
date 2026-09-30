@@ -18,14 +18,38 @@ head_title: "AI Resources for Surgeons | LocalMinimum.us"
 - [Suggest an item](../submit.html) for the newsletter.
 - [Library](../library/): posts and reading lists.
 
+### From the newsletter
+
+- **Issue 1:** [Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace), Dario Amodei's essay on what powerful AI could do for biology and medicine, and [Ilya Sutskever on the Dwarkesh Podcast](https://www.youtube.com/watch?v=aR20FWCCjAs).
+- **Issue 2:** Dr. Marissa Famularo's [free literature digest prompt](https://statup.app/briefing.html), and [Dr. Xiao Liu on evaluating medical AI](https://ai-podcast.nejm.org/e/beyond-the-hype-dr-xiao-liu-on-evaluating-medical-ai/) on NEJM AI Grand Rounds.
+
 ## Johns Hopkins AI resources
 
-- **[HopGPT](https://it.johnshopkins.edu/ai/hopgpt/)** (or through [my.jh.edu](https://my.jh.edu/)): Hopkins' secure, JHED-authenticated AI platform. Approved for sensitive data including PHI/PII. The sanctioned route.
+### Tools
+
+- **[HopGPT](https://it.johnshopkins.edu/ai/hopgpt/)** ([open HopGPT](https://chat.ai.jh.edu/)): Hopkins' secure, JHED-authenticated AI platform. Approved for sensitive data including PHI/PII. The sanctioned route.
+- **[Microsoft Copilot for Microsoft 365](https://it.johnshopkins.edu/ai/microsoft-copilot/)**: AI inside Outlook, Word, Excel and Teams, under your Hopkins account.
+- **[Abridge AI scribe](https://it.johnshopkins.edu/ai/ambient-virtual-ai-scribes/)**: the approved ambient scribe that drafts clinical notes from the visit conversation.
+- **[Zoom AI Companion](https://it.johnshopkins.edu/ai/zoom-ai-companion/)**: meeting summaries and action items.
+- **[Approved clinical AI tools](https://it.johnshopkins.edu/ai/clinical-tools/)**: IT's page for the current list of approved clinical tools (JHED login needed to see the list).
+
+### Policy
+
 - **[JHU Guidelines for Responsible Use of AI](https://it.johnshopkins.edu/ai/guidelines-for-responsible-use-of-ai/)**: the institutional ground rules for everyday AI use.
 - **[Research IT: Artificial Intelligence](https://researchit.jhu.edu/artificial-intelligence/)**: where to start for research uses. IRB approval for PHI/PII work, SIP approval for clinical research.
 - **["Generative AI at Johns Hopkins: What Faculty Need to Know"](https://medicine-matters.blogs.hopkinsmedicine.org/2026/05/generative-ai-at-johns-hopkins-what-faculty-need-to-know/)**: Medicine Matters, May 2026. The faculty-facing summary of current policy.
-- **[Data Science and AI Institute](https://ai.jhu.edu/)**: the university's AI hub, and the place to find collaborators across schools.
-- **[JHU Libraries: Using AI](https://guides.library.jhu.edu/using-AI)**: the library's guide to AI tools for research and writing.
+
+### Learning
+
+- **[GenAI @ JHU](https://genai.jhu.edu/)**: the university's hub for generative AI guidance and training.
+- **[JHU Libraries: AI Foundations for Academic Work](https://guides.library.jhu.edu/ai-foundations)**: the place to start if you are new to AI for research and writing.
+- **[JHU Libraries: Using AI](https://guides.library.jhu.edu/using-AI)**: the library's broader guide to AI tools for research and writing.
+- **[Library Data Services](https://dataservices.library.jhu.edu/training-workshops/)**: free workshops and one-on-one consultations on data and analysis methods.
+
+### Collaborators and compute
+
+- **[Data Science and AI Institute](https://ai.jhu.edu/)**: the university's AI hub and the place to find collaborators across schools. See its [events](https://ai.jhu.edu/events/) and [postdoctoral fellowship](https://ai.jhu.edu/careers/postdoctoral-fellowship-program/).
+- **[Malone Center for Engineering in Healthcare](https://malonecenter.jhu.edu/)**: Hopkins engineers working on clinical problems. A good place to find a technical partner.
 - **[ARCH condos and colocation](https://www.arch.jhu.edu/about-arch/condos-and-colocation/)**: buy nodes on the Rockfish cluster or rack your own hardware at ARCH, if you want to run models locally.
 
 ## AI in medicine
@@ -36,6 +60,23 @@ The clinical evidence, and the rules we practice under.
 - **[Ground Truths](https://erictopol.substack.com/)**, Eric Topol (newsletter and [podcast](https://erictopol.substack.com/s/podcasts)): medical AI interviews and a steady read on the evidence.
 - **[FSMB recommendations on AI in clinical practice](https://www.fsmb.org/advocacy/news-releases/fsmb-releases-recommendations-on-the-responsible-and-ethical-incorporation-of-ai-into-clinical-practice/)**: the Federation of State Medical Boards on accountability when physicians use AI tools. The view from the people who license us.
 - **[AAMC AI competencies](https://www.aamc.org/about-us/medical-education/ai-competencies)**: what the AAMC expects learners and educators to be able to do with AI. Useful for anyone building a curriculum.
+
+## How to evaluate an AI paper or product
+
+Questions I ask before trusting a model, whether it is in a journal or a sales pitch.
+
+1. **Who and what?** What exactly does it predict or do, and do the patients it was built on look like mine?
+2. **How was it tested?** On held-out data, at another hospital, or prospectively? External and prospective validation carry the most weight.
+3. **Compared to what?** Standard care, clinicians, or a simple model? Is the difference large enough to matter clinically?
+4. **Is it calibrated?** A high AUC can still come with wrong risk estimates.
+5. **What happens when it is wrong,** and who catches the error?
+6. **Did it change anything?** Better decisions or outcomes, or only better predictions?
+
+The reporting guidelines are the formal version of these questions:
+
+- **[TRIPOD+AI](https://doi.org/10.1136/bmj-2023-078378)** (BMJ 2024): prediction models built with regression or machine learning.
+- **[CONSORT-AI](https://doi.org/10.1038/s41591-020-1034-x)** and **[SPIRIT-AI](https://doi.org/10.1038/s41591-020-1037-7)** (Nature Medicine 2020): trials of AI interventions, and their protocols. Dr. Xiao Liu, featured in Issue 2, was first author on CONSORT-AI.
+- **[DECIDE-AI](https://doi.org/10.1038/s41591-022-01772-9)** (Nature Medicine 2022): early clinical evaluation of AI decision support.
 
 ## How AI works
 
