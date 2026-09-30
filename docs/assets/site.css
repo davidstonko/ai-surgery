@@ -34,6 +34,12 @@ h1 { font-size: 36px; margin: 0 0 12px; }
 .prose h2 { font-size: 25px; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
 .prose hr { border: 0; border-top: 3px solid var(--accent); margin: 56px 0 0; }
 .prose hr + h2 { border-top: 0; padding-top: 0; margin-top: 28px; }
+.paper-cover { float: right; width: 240px; margin: 4px 0 16px 24px; }
+.paper-cover img, .paper-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+.paper-fig { margin: 8px 0 16px; }
+.paper-cover figcaption, .paper-fig figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+.clear { clear: both; }
+@media (max-width: 560px) { .paper-cover { float: none; width: 60%; margin: 8px auto 16px; } }
 .prose h3 { font-size: 20px; margin: 28px 0 8px; }
 .prose p { margin: 0 0 16px; }
 .prose ul { padding-left: 20px; margin: 0 0 20px; }
