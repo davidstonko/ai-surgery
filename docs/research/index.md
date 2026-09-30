@@ -52,7 +52,7 @@ Trauma has long been treated as unpredictable. Across four papers, we used big d
 
 #### Machine learning to predict meningioma grade from MRI
 
-<figure class="paper-fig">
+<figure class="paper-cover paper-side">
 <img src="{{ '/assets/research/meningioma-ml-fig1.jpg' | relative_url }}" alt="ROC curves comparing an optimized neural network, logistic regression, Gaussian SVM, naive Bayes and k-nearest neighbors for predicting atypical meningioma" width="1000" height="802" loading="lazy">
 <figcaption>Figure 1. ROC curves for each ML algorithm and statistical method in predicting atypical (WHO grade II) meningioma.</figcaption>
 </figure>
@@ -60,6 +60,8 @@ Trauma has long been treated as unpredictable. Across four papers, we used big d
 Hale AT, Stonko DP, et al. "Machine learning analyses can differentiate meningioma grade by features on magnetic resonance imaging." *Neurosurg Focus* 2018;45(5):E4. [Paper](https://thejns.org/focus/view/journals/neurosurg-focus/45/5/article-pE4.xml)
 
 I did the ML programming. Working in MATLAB from six features a neuroradiologist read on preoperative MRI (tumor volume, peritumoral edema, necrosis, location, draining vein) plus sex, I trained and validated a panel of binary classifiers on 128 patients: k-nearest neighbors, support vector machines, naive Bayes, neural networks and logistic regression. I then compared them head to head on the ROC curve. The optimized neural network did best (AUC 0.89).
+
+<div class="clear"></div>
 
 <hr class="sub">
 
