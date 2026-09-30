@@ -10,7 +10,7 @@ description: David Stonko's research on outcomes and applied machine learning in
 
 <div class="prose" markdown="1">
 
-Publications are on [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en). The tools below are open source and free to use for research.
+Publications are on [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en). The [research tools](#open-research-tools) further down are open source and free to use for research.
 
 <hr>
 
