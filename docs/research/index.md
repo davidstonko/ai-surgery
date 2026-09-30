@@ -117,20 +117,20 @@ More of my carotid work:
 
 ### Vascular trauma
 
-Much of my research is on the management of vascular and traumatic emergencies, including more than a dozen journal articles and book chapters on vascular trauma. Five of these studies, three as first author, are cited in the [2025 ESVS Clinical Practice Guidelines on the Management of Vascular Trauma](https://doi.org/10.1016/j.ejvs.2024.12.018), in the recommendations on synthetic interposition grafts, major abdominal vascular injury and postoperative antiplatelet therapy. Others are cited in the AAST and WSES guidelines on major thoracic vascular injuries (2026), the WSES guidelines on trauma in elderly and frail patients (2023), and the European guideline update on initial surgical management of upper extremity injuries in the severely injured (2026).
+Much of my research is on the management of vascular and traumatic emergencies, including more than a dozen journal articles and book chapters on vascular trauma. Five of these studies are cited in the [2025 ESVS Clinical Practice Guidelines on the Management of Vascular Trauma](https://doi.org/10.1016/j.ejvs.2024.12.018), in the recommendations on synthetic interposition grafts, major abdominal vascular injury and postoperative antiplatelet therapy. Others are cited in the AAST and WSES guidelines on major thoracic vascular injuries (2026), the WSES guidelines on trauma in elderly and frail patients (2023), and the European guideline update on initial surgical management of upper extremity injuries in the severely injured (2026).
 
-#### First-author papers cited in the 2025 ESVS guidelines
+#### Cited in the 2025 ESVS guidelines
 
-All three come from PROOVIT, the American Association for the Surgery of Trauma's prospective multicenter vascular injury registry.
+Most use data from PROOVIT, the American Association for the Surgery of Trauma's prospective multicenter vascular injury registry.
 
 - Stonko DP, Betzold RD, Abdou H, et al. "In-hospital outcomes in autogenous vein versus synthetic graft interposition for traumatic arterial injury: a propensity-matched cohort from PROOVIT." *J Trauma Acute Care Surg* 2022;92(2):407-412. [Paper](https://doi.org/10.1097/TA.0000000000003465)
 - Stonko DP, Azar FK, Betzold RD, et al. "Contemporary management and outcomes of injuries to the inferior vena cava: a prospective multicenter trial from PROspective Observational Vascular Injury Treatment." *Am Surg* 2023;89(4):714-719. [Paper](https://doi.org/10.1177/00031348211038556)
 - Stonko DP, Betzold RD, Azar FK, et al. "Postoperative antiplatelet and/or anticoagulation use does not impact complication or reintervention rates after vein repair of arterial injury: a PROOVIT study." *Vascular* 2023;31(4):777-783. [Paper](https://doi.org/10.1177/17085381221082371)
+- Siddiqi N, Lammers D, Hu P, Stonko DP, et al. "Comparison of contralateral vs ipsilateral vein graft for traumatic vascular injury repair: a cohort from PROOVIT." *Am Surg* 2024;90(9):2310-2313. [Paper](https://doi.org/10.1177/00031348241246167)
+- Chipman AM, Ottochian M, Ricaurte D, Gunter G, DuBose JJ, Stonko DP, et al. "Contemporary management and time to revascularization in upper extremity arterial injury." *Vascular* 2023;31(2):284-291. [Paper](https://doi.org/10.1177/17085381211062726)
 
 #### Other clinical studies
 
-- Chipman AM, Ottochian M, Ricaurte D, Gunter G, DuBose JJ, Stonko DP, et al. "Contemporary management and time to revascularization in upper extremity arterial injury." *Vascular* 2023;31(2):284-291. [Paper](https://doi.org/10.1177/17085381211062726) Also cited in the ESVS guidelines.
-- Siddiqi N, Lammers D, Hu P, Stonko DP, et al. "Comparison of contralateral vs ipsilateral vein graft for traumatic vascular injury repair: a cohort from PROOVIT." *Am Surg* 2024;90(9):2310-2313. [Paper](https://doi.org/10.1177/00031348241246167) Also cited in the ESVS guidelines.
 - Abdou H, Edwards J, Stonko DP, et al. "The role of endovascular repair of popliteal arterial injuries in the acute setting." *Ann Vasc Surg* 2022;87:522-528. [Paper](https://doi.org/10.1016/j.avsg.2022.05.040)
 - Abdou H, Treffalls RN, Stonko DP, et al. "Endovascular stenting techniques for blunt carotid injury." *Vascular* 2024;32(5):1055-1062. [Paper](https://doi.org/10.1177/17085381231193062)
 - Patel N, Harfouche M, Stonko DP, et al. "Factors associated with increased mortality in severe abdominopelvic injury." *Shock* 2022;57(2):175-180. [Paper](https://doi.org/10.1097/SHK.0000000000001851)
