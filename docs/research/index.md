@@ -63,6 +63,34 @@ I did the ML programming. Working in MATLAB from six features a neuroradiologist
 
 <div class="clear"></div>
 
+<details markdown="1">
+<summary>Other machine learning and applied math work (15)</summary>
+
+**Machine learning and AI**
+
+- Wise ES, Stonko DP, Glaser ZA, et al. "Prediction of prolonged ventilation after coronary artery bypass grafting: data from an artificial neural network." *Heart Surg Forum* 2017;20(1):E007-E014. [Paper](https://doi.org/10.1532/hsf.1566)
+- Stonko DP\*, O'Neill DC\*, Dennis BM, et al. "Trauma quality improvement: reducing triage errors by automating the level assignment process." *J Surg Educ* 2018;75(6):1551-1557. [Paper](https://doi.org/10.1016/j.jsurg.2018.03.014)
+- Hale AT, Stonko DP, Lim J, et al. "Using an artificial neural network to predict traumatic brain injury." *J Neurosurg Pediatr* 2019;23(2):219-226. [Paper](https://doi.org/10.3171/2018.8.PEDS18370)
+- Zarkowsky DS, Stonko DP. "Artificial intelligence's role in vascular surgery decision-making." *Semin Vasc Surg* 2021;34(4):260-267. [Paper](https://doi.org/10.1053/j.semvascsurg.2021.10.005)
+- Stonko DP, Weller JH, Gonzalez Salazar AJ, et al. "A pilot machine learning study using trauma admission data to identify risk for high length of stay." *Surg Innov* 2023;30(3):356-365. [Paper](https://doi.org/10.1177/15533506221139965)
+- Stonko DP, Morrison JJ, Hicks CW. "A review of mature machine learning and artificial intelligence enabled applications in aortic surgery." *JVS-Vascular Insights* 2023.
+- Stonko DP, Hicks CW. "Mature artificial intelligence- and machine learning-enabled medical tools impacting vascular surgical care: a scoping review of late-stage, US Food and Drug Administration-approved or cleared technologies relevant to vascular surgeons." *Semin Vasc Surg* 2023;36(3):460-470. [Paper](https://doi.org/10.1053/j.semvascsurg.2023.06.001)
+- Stonko DP, Jarman MP, Byrne JP. "It is time for some deep learning: a statistical commentary on machine learning for clinical prediction models using imbalanced datasets." *Trauma Surg Acute Care Open* 2024;9:e001567.
+
+**Applied math, mathematical biology and biophysics**
+
+- Stonko DP, Manning L, Starz-Gaiano M, Peercy BE. "A mathematical model of collective cell migration in a three-dimensional, heterogeneous environment." *PLoS One* 2015;10(4):e0122799. [Paper](https://doi.org/10.1371/journal.pone.0122799)
+- Wimmer RJ, Liu Y, Schachter TN, Stonko DP, Peercy BE, Schneider MF. "Mathematical modeling reveals modulation of both nuclear influx and efflux of Foxo1 by the IGF-I/PI3K/Akt pathway in skeletal muscle fibers." *Am J Physiol Cell Physiol* 2014;306(6):C570-C584. [Paper](https://doi.org/10.1152/ajpcell.00338.2013)
+- Stonko DP. "A discrete, three-dimensional, force-based mathematical model of collective cell migration." M.S. thesis, Department of Mathematics and Statistics, University of Maryland, Baltimore County, 2014. Advisors: Bradford E. Peercy, PhD, and Michelle Starz-Gaiano, PhD.
+- Stonko D, Starz-Gaiano M, Peercy BE. "Implementing a numerical package to model collective cell migration." Technical Report HPCF-2014-2, UMBC High Performance Computing Facility, 2014.
+- Stonko D, Khuvis S, Gobbert MK. "Numerical methods to solve 2-D and 3-D elliptic partial differential equations using Matlab on the cluster maya." Technical Report HPCF-2014-9, UMBC High Performance Computing Facility, 2014.
+- Stonko DP, Starz-Gaiano M, Peercy BE. "Force-based biophysical model of border cell migration: unraveling the mechanism of collective cell migration." UMBC Department of Mathematics and Statistics, 2013.
+- Ge X\*, Stonko DP\*. "Modeling a cellular response to a gradient: mathematics and molecular biology inform a mechanistic understanding." *UMBC Review* 2012;13.
+
+\* Equal contribution.
+
+</details>
+
 <hr class="sub">
 
 ### Current work: Anatomy-informed neural networks (AINN)
