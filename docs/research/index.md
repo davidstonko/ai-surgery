@@ -80,6 +80,39 @@ This is early work. The preprint lays out the framework and checks the math agai
 
 <hr>
 
+## Clinical Research
+
+### Open thoracoabdominal aortic aneurysm repair
+
+Open thoracoabdominal repair is among the largest operations in vascular surgery, and spinal cord ischemia is its most feared complication. Our work looks at how the operation is sequenced and monitored at Johns Hopkins.
+
+- Stonko DP, Aru RG, Tan LT, et al. "Open thoracoabdominal aortic reconstruction with distal aortic perfusion: a bottom-up approach is safe in selected patients." *Ann Vasc Surg* 2026. [Paper](https://doi.org/10.1016/j.avsg.2026.09.021)
+
+  Repair is usually done top-down. A bottom-up sequence, doing the distal anastomoses first, can help when those are expected to be hard, such as with hostile iliac anatomy. In 44 patients (33 top-down, 11 bottom-up), in-hospital mortality, spinal cord ischemia, new dialysis and length of stay were similar, so the sequence can be tailored to the patient's anatomy and the surgeon's experience.
+
+- Aru RG, Stonko DP, Tan LT, et al. "Utility of motor-evoked potentials in contemporary open thoracoabdominal aortic repair." *J Vasc Surg* 2024;80(4):979-987. [Paper](https://doi.org/10.1016/j.jvs.2024.04.022)
+
+  In 79 open type 2, type 3 and completion repairs with intraoperative motor-evoked potential monitoring, MEP changes tracked with the number of vertebral levels replaced. Spinal cord ischemia occurred only when more than six levels were replaced (17.7% overall), was usually reversible, and led to permanent paraplegia in 5.1%.
+
+<hr class="sub">
+
+### Carotid revascularization
+
+Stonko DP, Goldsborough E, Kibrik P, Zhang G, Holscher CM, Hicks CW. "Use of transcarotid artery revascularization, transfemoral carotid artery stenting, and carotid endarterectomy in the US from 2015 to 2019." *JAMA Netw Open* 2022;5(9):e2231944. [Paper](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2796354)
+
+TCAR was cleared by the FDA in 2015. Using the Vascular Quality Initiative, we tracked 108,676 carotid revascularizations over its first five years. Endarterectomy fell from 84.9% of cases to 64.8%, while TCAR rose from 0.8% to 21.9%, overtaking transfemoral stenting. The shift was largest in high-risk patients, and high-risk status was the strongest predictor of choosing TCAR.
+
+More of my carotid work:
+
+- Stonko DP, et al. "Association of year of surgery and carotid stenting outcomes in high-risk patients, 2015-2021." *JAMA Surg* 2023;158(7):768-769. [Paper](https://doi.org/10.1001/jamasurg.2022.8384)
+- Stonko DP, et al. "Automatic 1-year follow-up appointment creation and reminders can improve long-term follow-up after carotid revascularization." *Am J Surg* 2024;227:57-62. [Paper](https://doi.org/10.1016/j.amjsurg.2023.09.032)
+- Zhang GQ, Bose S, Stonko DP, et al. "Transcarotid artery revascularization is associated with similar outcomes to carotid endarterectomy regardless of patient risk status." *J Vasc Surg* 2022;76(2):474-481. [Paper](https://doi.org/10.1016/j.jvs.2022.03.860)
+- Kibrik P, Stonko DP, et al. "Association of carotid revascularization approach with perioperative outcomes based on symptom status and degree of stenosis among octogenarians." *J Vasc Surg* 2022;76(3):769-777. [Paper](https://doi.org/10.1016/j.jvs.2022.04.027)
+- Bose S, Stonko DP, et al. "Females are less likely to receive best medical therapy for stroke prevention before and after carotid revascularization than males." *J Vasc Surg* 2023;77(3):786-794. [Paper](https://doi.org/10.1016/j.jvs.2022.09.028)
+- Holscher CM, Dun C, Wu YHA, White M, Stonko DP, et al. "Impact of the 2023 Centers for Medicare & Medicaid Services policy change on carotid artery stenting use among Medicare beneficiaries." *Surgery* 2025;187:109622. [Paper](https://doi.org/10.1016/j.surg.2025.109622)
+
+<hr>
+
 ## Tools
 
 ### Automated aortic segmentation and EVAR planner
