@@ -115,9 +115,9 @@ More of my carotid work:
 
 ### Vascular trauma
 
-A major focus of my research has been optimizing the management of vascular and traumatic emergencies. I have published more than a dozen journal articles and book chapters on vascular trauma alone. Three of my first-author papers are cited in the [2025 ESVS Clinical Practice Guidelines on the Management of Vascular Trauma](https://doi.org/10.1016/j.ejvs.2024.12.018), informing recommendations on synthetic interposition grafts for vascular injury, management of major abdominal vascular trauma, and postoperative antiplatelet therapy. Seeing my work in these guidelines has been rewarding, because it helps other surgeons manage their patients too.
+A major focus of my research has been optimizing the management of vascular and traumatic emergencies. I have published more than a dozen journal articles and book chapters on vascular trauma alone. Five of my studies, three as first author, are cited in the [2025 ESVS Clinical Practice Guidelines on the Management of Vascular Trauma](https://doi.org/10.1016/j.ejvs.2024.12.018), informing recommendations on synthetic interposition grafts for vascular injury, management of major abdominal vascular trauma, and postoperative antiplatelet therapy. Seeing my work in these guidelines has been rewarding, because it helps other surgeons manage their patients too. My work is also cited in the AAST and WSES guidelines on major thoracic vascular injuries (2026), the WSES guidelines on trauma in elderly and frail patients (2023), and the European guideline update on initial surgical management of upper extremity injuries in the severely injured (2026).
 
-#### Cited in the 2025 ESVS guidelines
+#### First-author papers cited in the 2025 ESVS guidelines
 
 All three come from PROOVIT, the American Association for the Surgery of Trauma's prospective multicenter vascular injury registry.
 
@@ -127,8 +127,9 @@ All three come from PROOVIT, the American Association for the Surgery of Trauma'
 
 #### Other clinical studies
 
-- Chipman AM, Ottochian M, Ricaurte D, Gunter G, DuBose JJ, Stonko DP, et al. "Contemporary management and time to revascularization in upper extremity arterial injury." *Vascular* 2023;31(2):284-291. [Paper](https://doi.org/10.1177/17085381211062726)
-- Siddiqi N, Lammers D, Hu P, Stonko D, et al. "Comparison of contralateral vs ipsilateral vein graft for traumatic vascular injury repair: a cohort from PROOVIT." *Am Surg* 2024;90:2310-2313.
+- Chipman AM, Ottochian M, Ricaurte D, Gunter G, DuBose JJ, Stonko DP, et al. "Contemporary management and time to revascularization in upper extremity arterial injury." *Vascular* 2023;31(2):284-291. [Paper](https://doi.org/10.1177/17085381211062726) Also cited in the ESVS guidelines.
+- Siddiqi N, Lammers D, Hu P, Stonko DP, et al. "Comparison of contralateral vs ipsilateral vein graft for traumatic vascular injury repair: a cohort from PROOVIT." *Am Surg* 2024;90(9):2310-2313. [Paper](https://doi.org/10.1177/00031348241246167) Also cited in the ESVS guidelines.
+- Abdou H, Edwards J, Stonko DP, et al. "The role of endovascular repair of popliteal arterial injuries in the acute setting." *Ann Vasc Surg* 2022;87:522-528. [Paper](https://doi.org/10.1016/j.avsg.2022.05.040)
 - Abdou H, Treffalls RN, Stonko DP, et al. "Endovascular stenting techniques for blunt carotid injury." *Vascular* 2024;32(5):1055-1062. [Paper](https://doi.org/10.1177/17085381231193062)
 - Patel N, Harfouche M, Stonko DP, et al. "Factors associated with increased mortality in severe abdominopelvic injury." *Shock* 2022;57(2):175-180. [Paper](https://doi.org/10.1097/SHK.0000000000001851)
 - Edwards J, Treffalls RN, Abdou H, Stonko DP, et al. "Lower Extremity Staged Revascularization (LESR) as a new innovative concept for lower extremity salvage in acute popliteal artery injuries: a hypothesis." *Patient Saf Surg* 2022;16(1):39. [Paper](https://doi.org/10.1186/s13037-022-00349-2)
@@ -156,6 +157,18 @@ All three come from PROOVIT, the American Association for the Surgery of Trauma'
 - Treffalls RN, Lubas M, Morrison JJ, Stonko DP. "Autologous blood resuscitation for large animals in a research setting using the Hemafuse device: preliminary data of device use for controlled and real-world hemorrhage." *Front Vet Sci* 2022;9:1069420. [Paper](https://doi.org/10.3389/fvets.2022.1069420)
 
 </details>
+
+<hr class="sub">
+
+### Book chapters
+
+- Stonko DP, Black JH III. "Management of aortic arch and arch vessel injuries." In: Mitchell, Farber, Moore, Cox, eds. *Decision Making in Vascular Trauma.* Wolters Kluwer. Expected April 2027.
+- Stonko DP, Black JH III. "Vascular reconstruction in oncologic surgery." In: Sidawy, Perler, Harris, eds. *Rutherford's Vascular Surgery and Endovascular Therapy,* 11th ed. Elsevier; 2026.
+- Stonko DP, Holscher CM. "Acute limb ischemia: surgical and endovascular treatment." In: Sidawy, Perler, Harris, eds. *Rutherford's Vascular Surgery and Endovascular Therapy,* 11th ed. Elsevier; 2026.
+- Stonko DP, Reifsnyder T. "Management of acute mesenteric ischemia." In: Cameron JL, Cameron AM, eds. *Current Surgical Therapy,* 15th ed. Elsevier; 2026.
+- Stonko DP, Hicks CW. "When to surgically intervene for claudication?" *Advances in Surgery* 2025;59(1):245-258.
+- Stonko DP, Hicks CW. "Current management of intermittent claudication." *Advances in Surgery* 2023;57(1):103-113. [Chapter](https://doi.org/10.1016/j.yasu.2023.04.009)
+- Stonko DP, Hicks CW. "Management of ruptured abdominal aortic aneurysms." In: Cameron JL, Cameron AM, eds. *Current Surgical Therapy,* 14th ed. Elsevier; 2022.
 
 <hr>
 
