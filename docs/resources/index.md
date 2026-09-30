@@ -54,7 +54,17 @@ What I listen to and read to stay current.
 - **[Ground Truths](https://erictopol.substack.com/)**, Eric Topol (newsletter and [podcast](https://erictopol.substack.com/s/podcasts)): medical AI interviews and a steady read on the evidence.
 - **[Dwarkesh Podcast](https://www.dwarkesh.com/)**: long interviews with lab leaders and researchers.
 - **[Latent Space](https://www.latent.space/podcast)** (podcast): how AI is actually built and deployed, from the engineering side.
-- **[SemiAnalysis](https://newsletter.semianalysis.com/about)** (newsletter): chips, data centers and the economics behind them.
 - **[METR time horizons](https://metr.org/time-horizons/)**: how long a task AI agents can finish on their own, updated as new models ship.
+
+## The AI ecosystem
+
+Who builds the models, the chips and the data centers, and where the money goes. It explains why the tools change as fast as they do.
+
+- **[SemiAnalysis](https://semianalysis.com/)**, Dylan Patel: the best research on chips, data centers and AI economics.
+- **[Lex Fridman #459: DeepSeek, China, OpenAI, NVIDIA, xAI, TSMC, Stargate, and AI Megaclusters](https://lexfridman.com/deepseek-dylan-patel-nathan-lambert/)** (podcast): Dylan Patel and Nathan Lambert on the hardware and model race. Long, and worth it.
+- **[Dwarkesh Podcast with Dylan Patel](https://www.dwarkesh.com/p/dylan-patel)**: chips, data centers and the build-out.
+- **[Lex Fridman #447: Cursor Team, Future of Programming with AI](https://lexfridman.com/cursor-team/)** (podcast): the Cursor founders on building an AI coding tool, and a good look at how the products built on top of the models get made.
+- **[Epoch AI](https://epoch.ai/)**: data and charts on compute, training cost and model trends.
+- **[Stratechery](https://stratechery.com/)**, Ben Thompson: the business strategy of the tech and AI companies.
 
 </div>
