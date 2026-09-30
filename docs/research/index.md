@@ -10,15 +10,17 @@ description: David Stonko's research on outcomes and applied machine learning in
 
 <div class="prose" markdown="1">
 
-Publications are on [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en). The [research tools](#open-research-tools) further down are open source and free to use for research.
+Publications are on [Google Scholar](https://scholar.google.com/citations?user=615pt6cAAAAJ&hl=en). The [research tools](#tools) further down are open source and free to use for research.
 
 <hr>
 
-## David's classical ML research work
+## David's ML/AI Research
+
+### Classical ML research work
 
 Before large language models, my machine learning work used neural networks, classical ML and large registry datasets to predict patient outcomes, tumor grade and trauma center workload.
 
-### Neural networks outperform CT grading for pediatric TBI outcomes
+#### Neural networks outperform CT grading for pediatric TBI outcomes
 
 <figure class="paper-cover">
 <a href="https://thejns.org/focus/view/journals/neurosurg-focus/45/5/neurosurg-focus.45.issue-5.xml"><img src="{{ '/assets/research/nsfocus-45-5-cover.jpg' | relative_url }}" alt="Cover of Neurosurgical Focus, November 2018, showing the neural network diagram from this paper: nine input variables, a layer of training nodes, and a favorable versus unfavorable outcome" width="240" height="320" loading="lazy"></a>
@@ -31,7 +33,7 @@ In 565 children with traumatic brain injury, the standard CT grading systems (He
 
 <div class="clear"></div>
 
-### Predicting trauma volume and acuity to direct staffing
+#### Predicting trauma volume and acuity to direct staffing
 
 Trauma has long been treated as unpredictable. Across four papers, we used big data and classical ML to predict daily trauma volume and acuity at large US Level I trauma centers, so staffing and resources can be matched to demand.
 
@@ -48,7 +50,7 @@ Trauma has long been treated as unpredictable. Across four papers, we used big d
 
   A review of where machine learning fits across a trauma system, from nurse and provider staffing ratios to where to site a new trauma center.
 
-### Machine learning to predict meningioma grade from MRI
+#### Machine learning to predict meningioma grade from MRI
 
 <figure class="paper-fig">
 <img src="{{ '/assets/research/meningioma-ml-fig1.jpg' | relative_url }}" alt="ROC curves comparing an optimized neural network, logistic regression, Gaussian SVM, naive Bayes and k-nearest neighbors for predicting atypical meningioma" width="1000" height="802" loading="lazy">
@@ -59,9 +61,9 @@ Hale AT, Stonko DP, et al. "Machine learning analyses can differentiate meningio
 
 I did the ML programming. Working in MATLAB from six features a neuroradiologist read on preoperative MRI (tumor volume, peritumoral edema, necrosis, location, draining vein) plus sex, I trained and validated a panel of binary classifiers on 128 patients: k-nearest neighbors, support vector machines, naive Bayes, neural networks and logistic regression. I then compared them head to head on the ROC curve. The optimized neural network did best (AUC 0.89).
 
-<hr>
+<hr class="sub">
 
-## Current work: Anatomically informed neural networks (AINN)
+### Current work: Anatomically informed neural networks (AINN)
 
 Physics-informed neural networks (PINNs) build known physical laws into how a network is trained, so a model is penalized for predictions that break physics. That lets them learn from less data and behave more sensibly outside the data they were trained on.
 
@@ -69,7 +71,7 @@ I am working on the anatomic analogue: using what we already know about human an
 
 <hr>
 
-## Open research tools
+## Tools
 
 ### Automated aortic segmentation and EVAR planner
 
@@ -89,9 +91,7 @@ Estimates the probability that a diabetic foot ulcer heals within 180 days, from
 
 For research and education only. Not for clinical decision-making.
 
-<hr>
-
-## More code
+### More code
 
 Everything else is on [GitHub](https://github.com/davidstonko), including the [Claude skills](../skills/).
 

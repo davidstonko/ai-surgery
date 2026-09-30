@@ -40,6 +40,10 @@ h1 { font-size: 36px; margin: 0 0 12px; }
 .paper-cover figcaption, .paper-fig figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
 .clear { clear: both; }
 @media (max-width: 560px) { .paper-cover { float: none; width: 60%; margin: 8px auto 16px; } }
+.prose hr.sub { border-top: 1px solid var(--line); margin: 40px 0 0; }
+.prose hr + h3 { margin-top: 24px; }
+.prose h2 + h3 { margin-top: 12px; }
+.prose h4 { font-size: 18px; margin: 28px 0 8px; }
 .prose h3 { font-size: 20px; margin: 28px 0 8px; }
 .prose p { margin: 0 0 16px; }
 .prose ul { padding-left: 20px; margin: 0 0 20px; }
