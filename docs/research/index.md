@@ -36,12 +36,16 @@ In 565 children with traumatic brain injury, the standard CT grading systems (He
 Trauma has long been treated as unpredictable. Across four papers, we used big data and classical ML to predict daily trauma volume and acuity at large US Level I trauma centers, so staffing and resources can be matched to demand.
 
 - Stonko DP, et al. "Artificial intelligence can predict daily trauma volume and average acuity." *J Trauma Acute Care Surg* 2018;85(2):393-397. [Paper](https://doi.org/10.1097/TA.0000000000001947)
+
   A neural network built on three years of registry data plus local weather and calendar data predicted daily trauma volume, penetrating trauma, emergent operative cases and mean Injury Severity Score at one Level I center (r = 0.89).
 - Stonko DP, et al. "Identifying temporal patterns in trauma admissions: Informing resource allocation." *PLoS One* 2018;13(12):e0207766. [Paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0207766)
+
   In 10,684 trauma contacts, admissions peaked on weekends and around evening shift change, with a high season from April to late October. Penetrating trauma and patients headed to the OR arrived later in the day than blunt trauma and floor admissions.
 - Dennis BM, Stonko DP, et al. "Artificial neural networks can predict trauma volume and acuity regardless of center size and geography: A multicenter study." *J Trauma Acute Care Surg* 2019;87(1):181-187. [Paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC6602836/)
+
   One network trained across five geographically distinct Level I centers (43,380 traumas) held its accuracy on new data (R = 0.87) and did best on high-volume days.
 - Stonko DP, et al. "Artificial intelligence in trauma systems." *Surgery* 2021;169(6):1295-1299. [Paper](https://www.sciencedirect.com/science/article/pii/S0039606020305092)
+
   A review of where machine learning fits across a trauma system, from nurse and provider staffing ratios to where to site a new trauma center.
 
 ### Machine learning to predict meningioma grade from MRI
