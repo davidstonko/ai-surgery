@@ -18,7 +18,7 @@ Publications are on [Google Scholar](https://scholar.google.com/citations?user=6
 
 ### Classical ML research work
 
-Before large language models, my machine learning work used neural networks, classical ML and large registry datasets to predict patient outcomes, tumor grade and trauma center workload.
+Before large language models, my machine learning work used neural networks, classical ML and large registry datasets to predict patient outcomes, including some examples below like predicting tumor grade, surgical outcomes and trauma center workload.
 
 #### Neural networks outperform CT grading for pediatric TBI outcomes
 
