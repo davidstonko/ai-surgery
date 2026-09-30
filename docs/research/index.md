@@ -126,7 +126,7 @@ Open thoracoabdominal repair is among the largest operations in vascular surgery
 
 ### Carotid revascularization
 
-I have done research with Dr. Caitlin W. Hicks, an internationally recognized expert in carotid revascularization and public health, on a number of projects. The paper I would point to first:
+I have done research with Dr. Caitlin W. Hicks, an internationally recognized expert in carotid revascularization and public health, on a number of projects.
 
 Stonko DP, Goldsborough E, Kibrik P, Zhang G, Holscher CM, Hicks CW. "Use of transcarotid artery revascularization, transfemoral carotid artery stenting, and carotid endarterectomy in the US from 2015 to 2019." *JAMA Netw Open* 2022;5(9):e2231944. [Paper](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2796354)
 
