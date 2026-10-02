@@ -15,9 +15,9 @@ head_title: "The Local Minimum: AI in Surgery and Medicine | David Stonko, MD, M
 </div>
 
 <h2 class="section-title">Library</h2>
-<ul class="list">
+<ul class="list" id="library">
 {% for post in site.posts %}
-  <li>
+  <li data-title="{{ post.title | escape }}">
     <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p>{{ post.dek | default: post.excerpt | strip_html | truncate: 200 }}</p>
@@ -74,3 +74,42 @@ head_title: "The Local Minimum: AI in Surgery and Medicine | David Stonko, MD, M
     <p>Send a paper, talk or podcast for the newsletter. Credited to you if it runs.</p>
   </li>
 </ul>
+
+<script>
+// Newly sent issues show up here before a Library post is written for them.
+(function () {
+  var EP = "https://script.google.com/macros/s/AKfycbznRIi9kqYA7Nl2aLu8MeGuTUoDyCeDDZfUys0gMCIKblIJLchTzZK36jxav47g6SLaVQ/exec";
+  var ul = document.getElementById("library");
+  if (!ul || !window.fetch) return;
+  function norm(t) { return (t || "").toLowerCase().replace(/\s+/g, " ").trim(); }
+  var have = {};
+  ul.querySelectorAll("li[data-title]").forEach(function (li) { have[norm(li.getAttribute("data-title"))] = 1; });
+  fetch(EP + "?action=archive").then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok || !d.issues) return;
+    var missing = d.issues.filter(function (x) { return x.title && !have[norm(x.title)]; });
+    missing.sort(function (a, b) { return a.n - b.n; }).forEach(function (x) {
+      var li = document.createElement("li");
+      var meta = document.createElement("p"); meta.className = "meta";
+      meta.textContent = (x.date ? x.date + " \u00b7 " : "") + "Issue " + x.n;
+      var h = document.createElement("h2"); var a = document.createElement("a");
+      a.href = "/issues/read/?n=" + x.n; a.textContent = x.title;
+      h.appendChild(a);
+      var dek = document.createElement("p");
+      li.appendChild(meta); li.appendChild(h); li.appendChild(dek);
+      ul.insertBefore(li, ul.firstChild);
+      fetch(EP + "?action=archive_issue&n=" + x.n).then(function (r) { return r.json(); }).then(function (i) {
+        if (!i || !i.html) return;
+        var doc = new DOMParser().parseFromString(i.html, "text/html");
+        var els = doc.body.querySelectorAll("*");
+        for (var k = 0; k < els.length; k++) {
+          if (norm(els[k].textContent) === norm(x.title)) {
+            var n = els[k].nextElementSibling;
+            if (n && n.textContent.trim().length < 300) dek.textContent = n.textContent.trim();
+            break;
+          }
+        }
+      }).catch(function () {});
+    });
+  }).catch(function () {});
+})();
+</script>
