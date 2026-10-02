@@ -69,6 +69,11 @@ To use it without installing, paste this into Claude with your draft attached:
 Fetch https://raw.githubusercontent.com/AIScientists-Dev/academic-humanizer/main/SKILL.md and follow it to edit the attached draft.
 ```
 
+### For figures
+
+- **[tufte-viz](https://github.com/aparente/claude-skills/tree/master/skills/tufte-viz)**, Angelica Parente. Teaches Claude Edward Tufte's rules for charts: maximize data ink, drop chartjunk, keep the graphic honest, use small multiples. Use it to plan a figure or to critique one you already made. Part of her [claude-skills](https://github.com/aparente/claude-skills) collection, which also has a design-thinking facilitator. MIT license.
+- **[cnsplots](https://github.com/faridrashidi/cnsplots)**, Farid Rashidi. A Python plotting library for figures styled to Cell, Nature and Science requirements, with more than 25 plot types including Kaplan-Meier curves, ROC curves and forest plots, and SVG files that stay editable in Illustrator. It ships with its own Claude Code skill: after `pip install cnsplots`, run `cnsplots skill install`, then type `/cnsplots`. [Documentation and examples](https://cnsplots.farid.one/). BSD license.
+
 ### From elsewhere at Hopkins
 
 - **[Academic AI Library Workshop](https://jhu-sheridan-libraries.github.io/academic-ai-library-workshop/)**, Steven J. Miklovic, Sheridan Libraries. A free, self-paced course on using Claude for research work. It covers checking an AI-generated literature scan before you trust it, synthesizing evidence without hiding gaps, and writing a skill of your own. Written for library staff, no programming needed, and useful for anyone doing literature reviews.
