@@ -6,7 +6,7 @@ description: Claude skills built for academic surgery, free to download and use.
 ---
 # Claude Skills
 
-<p class="lede">Skills I built for Claude to handle recurring academic work. Free to download and adapt.</p>
+<p class="lede">Skills I built for Claude to handle recurring academic work, plus a few by others that I use. All free.</p>
 
 <div class="prose" markdown="1">
 
@@ -50,6 +50,28 @@ Each prompt works with or without the skill installed (on the free plan, do step
 ### Why a skill beats prompting from scratch
 
 An installed skill costs one line of context until you call it, and because its text is identical every session it is served from the model's prompt cache instead of being reprocessed. House colors, slide geometry, logo rules and per-format structures are already worked out, so drafts converge in one or two turns instead of a long revision cycle. Attaching an old deck as a style example costs 10 to 100 times more tokens every time. And because the brand standards are built in, the lazy path and the correct path are the same path.
+
+## Skills by others
+
+These were not built by me. Each links to its authors' own page.
+
+### Academic Humanizer
+
+One of my favorite skills. It edits AI-assisted papers, rebuttals and grant proposals (including NIH Specific Aims and NSF summaries) so they read clearly and sound like you. It removes the usual AI tells: "In recent years" openers, inflated phrasing, run-on sentences. It also checks that no claim is stronger than its evidence. It never changes a number, result or citation. If you give it a few of your own published papers, it matches your voice. It lists every proposed change before making any edits. It is an editing aid, not a way around AI disclosure rules, so follow your journal's policy.
+
+Built by [MorphMind](https://github.com/AIScientists-Dev) (AIScientists-Dev on GitHub), building on [humanizer](https://github.com/blader/humanizer) by blader. MIT license.
+
+**[Academic Humanizer on GitHub](https://github.com/AIScientists-Dev/academic-humanizer)**
+
+To use it without installing, paste this into Claude with your draft attached:
+
+```
+Fetch https://raw.githubusercontent.com/AIScientists-Dev/academic-humanizer/main/SKILL.md and follow it to edit the attached draft.
+```
+
+### From elsewhere at Hopkins
+
+- **[Academic AI Library Workshop](https://jhu-sheridan-libraries.github.io/academic-ai-library-workshop/)**, Steven J. Miklovic, Sheridan Libraries. A free, self-paced course on using Claude for research work. It covers checking an AI-generated literature scan before you trust it, synthesizing evidence without hiding gaps, and writing a skill of your own. Written for library staff, no programming needed, and useful for anyone doing literature reviews.
 
 ## Suggest a skill
 
