@@ -71,8 +71,8 @@ Fetch https://raw.githubusercontent.com/AIScientists-Dev/academic-humanizer/main
 
 ### For figures
 
-- **[tufte-viz](https://github.com/aparente/claude-skills/tree/master/skills/tufte-viz)**, Angelica Parente. Teaches Claude Edward Tufte's rules for charts: maximize data ink, drop chartjunk, keep the graphic honest, use small multiples. Use it to plan a figure or to critique one you already made. Part of her [claude-skills](https://github.com/aparente/claude-skills) collection, which also has a design-thinking facilitator. MIT license.
-- **[cnsplots](https://github.com/faridrashidi/cnsplots)**, Farid Rashidi. A Python plotting library for figures styled to Cell, Nature and Science requirements, with more than 25 plot types including Kaplan-Meier curves, ROC curves and forest plots, and SVG files that stay editable in Illustrator. It ships with its own Claude Code skill: after `pip install cnsplots`, run `cnsplots skill install`, then type `/cnsplots`. [Documentation and examples](https://cnsplots.farid.one/). BSD license.
+- **[tufte-viz](https://github.com/aparente/claude-skills/tree/master/skills/tufte-viz)**, [Angelica Parente](https://github.com/aparente). Teaches Claude Edward Tufte's rules for charts: maximize data ink, drop chartjunk, keep the graphic honest, use small multiples. Use it to plan a figure or to critique one you already made. Part of her [claude-skills](https://github.com/aparente/claude-skills) collection, which also has a design-thinking facilitator. MIT license.
+- **[cnsplots](https://github.com/faridrashidi/cnsplots)**, [Farid Rashidi](https://farid.one/). A Python plotting library for figures styled to Cell, Nature and Science requirements, with more than 25 plot types including Kaplan-Meier curves, ROC curves and forest plots, and SVG files that stay editable in Illustrator. It ships with its own Claude Code skill: after `pip install cnsplots`, run `cnsplots skill install`, then type `/cnsplots`. [Documentation and examples](https://cnsplots.farid.one/). BSD license.
 
 ### From elsewhere at Hopkins
 
