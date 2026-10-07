@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720" role="img" aria-labelledby="title desc"> <title id="title">Simplified nephron schematic</title> <desc id="desc">Copy the complete SVG code into a plain-text editor, save it as nephron.svg, and reopen the saved file in a web browser to view it. This is a schematic teaching figure, not a scale drawing.</desc> <rect width="1100" height="720" fill="white"/> <defs> <style> .vessel { fill: none; stroke: #c62828; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; } .capillary { fill: none; stroke: #d84343; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; } .tubule { fill: none; stroke: #1976d2; stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; } .duct { fill: #fff59d; stroke: #d4a900; stroke-width: 7; stroke-linejoin: round; } .capsule { fill: #f7fbff; stroke: #263238; stroke-width: 5; } .label { font-family: Arial, Helvetica, sans-serif; font-size: 20px; fill: #000; } .leader { fill: none; stroke: #000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; } </style> </defs> <!-- Bowman’s capsule -->
+<path class="capsule" d="M225,115
+                        C170,150 170,245 225,280
+                        C280,315 365,290 390,225
+                        C415,160 360,95 295,100
+                        C265,100 242,105 225,115 Z"/>
+
+<!-- Afferent arteriole --> <path class="vessel" d="M65,175 C120,175 156,175 205,177"/> <!-- Glomerular capillary tuft -->
+<path class="capillary" d="M205,177
+                          C225,135 260,135 275,178
+                          C290,225 325,222 340,178
+                          C350,145 330,125 300,138
+                          C270,150 265,210 300,225
+                          C335,240 360,205 345,168
+                          C330,132 285,145 270,178
+                          C255,210 225,218 210,190
+                          C200,172 205,160 225,153"/>
+<path class="capillary" d="M220,200 C245,165 275,165 290,205
+                          C305,245 345,235 350,195"/>
+<path class="capillary" d="M235,145 C255,180 295,185 330,155"/>
+<path class="capillary" d="M230,220 C260,195 305,195 345,220"/>
+
+<!-- Efferent arteriole --> <path class="vessel" d="M350,175 C380,175 405,180 430,195"/> <!-- Peritubular capillaries / vasa recta -->
+<path class="capillary" d="M430,195 C475,215 500,245 510,295
+                          C520,345 510,405 505,560"/>
+<path class="capillary" d="M440,200 C470,240 470,280 460,330
+                          C450,385 455,455 465,560"/>
+<path class="capillary" d="M445,225 C420,270 420,330 435,370
+                          C450,412 445,475 440,530"/>
+<path class="capillary" d="M505,295 C550,315 570,350 565,405
+                          C560,470 550,525 545,565"/>
+<path class="capillary" d="M460,330 C490,350 515,350 545,335"/>
+<path class="capillary" d="M455,405 C485,425 520,425 560,405"/>
+<path class="capillary" d="M450,480 C485,500 520,500 555,480"/>
+
+<!-- Nephron tubule: Bowman’s capsule to proximal tubule -->
+<path class="tubule" d="M278,292
+                        C245,315 245,345 280,350
+                        C325,356 335,320 305,310
+                        C275,300 270,370 315,378
+                        C355,385 350,425 320,432
+                        C290,440 305,475 340,468
+                        C370,462 380,430 370,405
+                        C360,380 375,360 395,365
+                        C420,372 417,400 400,425
+                        C385,450 382,480 382,515"/>
+
+<!-- Descending limb, hairpin turn, ascending limb -->
+<path class="tubule" d="M382,515
+                        L382,575
+                        C382,620 410,645 450,645
+                        C490,645 518,620 518,575
+                        L518,420"/>
+
+<!-- Distal convoluted tubule -->
+<path class="tubule" d="M518,420
+                        C545,392 580,400 586,427
+                        C592,455 625,455 632,428
+                        C640,398 675,402 678,432
+                        C681,460 713,463 730,440
+                        C748,415 766,420 778,435
+                        L790,450"/>
+
+<!-- Collecting duct --> <path class="duct" d="M790,225 L840,225 L840,635 L790,635 Z"/> <path class="tubule" d="M790,450 L790,450"/> <!-- Labels and leader lines -->
+<text class="label" x="72" y="118">afferent arteriole</text>
+<path class="leader" d="M190,122 L145,122 L145,170"/>
+
+<text class="label" x="78" y="260">Bowman’s capsule</text>
+<path class="leader" d="M222,255 L184,255 L184,245"/>
+
+<text class="label" x="218" y="70">glomerulus</text>
+<path class="leader" d="M290,76 L290,122 L280,145"/>
+
+<text class="label" x="414" y="112">efferent arteriole</text>
+<path class="leader" d="M448,118 L448,158 L405,185"/>
+
+<text class="label" x="570" y="155">peritubular capillaries/vasa recta</text>
+<path class="leader" d="M720,160 L610,160 L520,295"/>
+
+<text class="label" x="80" y="410">proximal tubule</text>
+<path class="leader" d="M238,405 L285,405 L315,378"/>
+
+<text class="label" x="185" y="550">descending limb</text>
+<path class="leader" d="M350,545 L382,545"/>
+
+<text class="label" x="535" y="580">ascending limb</text>
+<path class="leader" d="M548,572 L518,572"/>
+
+<text class="label" x="600" y="365">distal tubule</text>
+<path class="leader" d="M665,372 L650,414"/>
+
+<text class="label" x="860" y="300">collecting duct</text>
+<path class="leader" d="M852,306 L840,306"/>
+</svg>
