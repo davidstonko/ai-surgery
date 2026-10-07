@@ -32,15 +32,6 @@ This is what HopGPT gave me. It is not perfect, but it shows HopGPT at its curre
 
 [Download my SVG](nephron.svg){: download="nephron.svg"}
 
-## Check it like a resident's drawing
-
-The tubule runs in the right order, with no gaps, into a separate collecting duct. But it is not finished:
-
-- The afferent and efferent arterioles enter and leave on opposite sides of the capsule. They should sit side by side at the vascular pole.
-- Several labels collide with their own leader lines or with the drawing, for example "Bowman's capsule" and "ascending limb."
-
-The next step is the real skill: ask follow-up questions until it is right, such as "Move the efferent arteriole so both arterioles sit at the vascular pole" or "Move every label so no line crosses any text." Then try the same approach on a figure you actually need.
-
 [Back to the newsletter](/issues/)
 
 </div>
