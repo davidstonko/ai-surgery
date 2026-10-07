@@ -26,7 +26,7 @@ SVG is a figure written as plain text. The shapes, colors and labels are lines o
 
 ## My result
 
-This is what HopGPT gave me. It is not perfect, but it shows HopGPT at its current limit for this sort of thing.
+This is what HopGPT gave me. It is not perfect, but it shows HopGPT at its current limit for this sort of thing. From here you can tell it to move labels, change fonts, or improve certain parts as needed. The point is not to make a perfect nephron. It is that there are workarounds for some of HopGPT's harness limitations.
 
 <img src="nephron.svg" alt="Labeled nephron schematic drawn by a language model: afferent arteriole entering a glomerular tuft inside Bowman's capsule, efferent arteriole leading to peritubular capillaries, and a blue tubule running through the proximal tubule, loop of Henle and distal tubule into a yellow collecting duct" style="width:100%;height:auto;border:1px solid #d5dae2;border-radius:8px;background:#fff">
 
