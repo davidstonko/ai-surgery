@@ -187,6 +187,32 @@ function cfToken_() { return (USE_CLOUDFLARE || FORCE_CLOUDFLARE_) ? PropertiesS
 // account allows about 100 a day.
 function remainingQuota_() { return cfToken_() ? 100000 : MailApp.getRemainingDailyQuota(); }
 
+// Swaps <img src="https://localminimum.us/..."> for cid: references and returns the image blobs,
+// fetched once per run. Any image that cannot be fetched keeps its normal link.
+const INLINE_IMG_CACHE_ = {};
+function inlineImages_(html) {
+  const images = {};
+  let n = 0;
+  const out = String(html).replace(/(<img\b[^>]*?\bsrc=")(https:\/\/localminimum\.us\/[^"]+?\.(?:png|jpe?g|gif))"/gi,
+    function (m, pre, url) {
+      try {
+        let blob = INLINE_IMG_CACHE_[url];
+        if (!blob) {
+          const r = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+          if (r.getResponseCode() !== 200) return m;
+          blob = r.getBlob();
+          INLINE_IMG_CACHE_[url] = blob;
+        }
+        const key = 'lmimg' + (n++);
+        images[key] = blob.copyBlob().setName(key + '.' + url.split('.').pop());
+        return pre + 'cid:' + key + '"';
+      } catch (err) {
+        return m;
+      }
+    });
+  return { html: out, images: images };
+}
+
 // One interface for all outgoing mail: {to, subject, body, htmlBody, name, replyTo, headers}.
 function sendMail_(o) {
   const token = GMAIL_DOMAINS.test(String(o.to)) ? null : cfToken_();
@@ -194,8 +220,11 @@ function sendMail_(o) {
     if (MailApp.getRemainingDailyQuota() < 1) {
       const q = new Error('Gmail daily quota reached'); q.rateLimited = true; throw q;
     }
+    // Hopkins Outlook blocks pictures linked from outside senders, so images from the site are
+    // attached to the message and shown inline instead.
+    const inl = o.htmlBody ? inlineImages_(o.htmlBody) : { html: o.htmlBody, images: {} };
     MailApp.sendEmail({ to: o.to, subject: o.subject, body: o.body || plainText_(o.htmlBody || ''),
-      htmlBody: o.htmlBody, name: o.name, replyTo: o.replyTo });
+      htmlBody: inl.html, inlineImages: inl.images, name: o.name, replyTo: o.replyTo });
     return;
   }
   const payload = { to: o.to, from: { address: FROM_ADDRESS, name: o.name || NEWSLETTER_NAME },
