@@ -96,6 +96,11 @@ I did the ML programming. Working in MATLAB from six features a neuroradiologist
 
 ### Current work: Anatomy-informed neural networks (AINN)
 
+<figure class="paper-cover poster-zoom">
+<a href="{{ '/assets/research/dsai-fall2026-poster.pdf' | relative_url }}"><img src="{{ '/assets/research/dsai-fall2026-poster.jpg' | relative_url }}" alt="Poster: Toward Solving the Wire-Stiffening Problem. Guidewire-vessel mechanics on SE(3), and anatomy-informed neural networks. Johns Hopkins Data Science and AI Institute Fall 2026 Symposium." width="1400" height="1050" loading="lazy"></a>
+<figcaption>Poster, Johns Hopkins Data Science and AI Institute Fall 2026 Symposium, October 2026. <a href="{{ '/assets/research/dsai-fall2026-poster.pdf' | relative_url }}">Open the PDF</a>.</figcaption>
+</figure>
+
 Deep learning models of anatomy can give answers that are numerically plausible but anatomically impossible, and they generalize poorly when data are scarce, which is the usual situation in surgery. Physics-informed neural networks (PINNs) handle the same problem in engineering by building known physical laws into training. AINN does the same with anatomy, in two ways:
 
 - **Soft priors** enter the loss as penalties. A renal transplant artery arising from the iliac instead of the aorta is treated as unexpected, not impossible.
@@ -106,6 +111,8 @@ The first test case is how the aortoiliac tree deforms when a stiff wire is pass
 This is early work. The preprint lays out the framework and checks the math against known ground truth; no network has been trained yet. Next is moving from simulation to real CT scans, to test whether the anatomic priors improve accuracy and reduce the training data needed.
 
 **[Read the preprint on arXiv](https://arxiv.org/abs/2608.21332)** &middot; Stonko DP. "Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation." arXiv:2608.21332, August 2026.
+
+<div class="clear"></div>
 
 <hr>
 
