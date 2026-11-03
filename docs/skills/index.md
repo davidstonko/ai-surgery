@@ -51,6 +51,31 @@ Each prompt works with or without the skill installed (on the free plan, do step
 
 An installed skill costs one line of context until you call it, and because its text is identical every session it is served from the model's prompt cache instead of being reprocessed. House colors, slide geometry, logo rules and per-format structures are already worked out, so drafts converge in one or two turns instead of a long revision cycle. Attaching an old deck as a style example costs 10 to 100 times more tokens every time. And because the brand standards are built in, the lazy path and the correct path are the same path.
 
+## JVS Format (/jvsformat)
+
+A fork of my manuscript skill, [/format](https://github.com/davidstonko/stonko-format), built for submitting to the *Journal of Vascular Surgery*. /format puts a Word manuscript into my house template and holds the house style my group uses for statistics, tables, figures and references. /jvsformat loads /format first, so all of that still applies, then takes the formatted paper the rest of the way to a complete JVS submission. It does not write the science.
+
+What it makes, in order:
+
+1. A cover letter to the editor on the corresponding author's letterhead, with the Hopkins logo (through JH Surgery Format above).
+2. A conformance pass on the manuscript as tracked changes: JVS word, figure, table and reference limits, title and abstract rules, Article Highlights and the Table of Contents Summary, Roman-numeral tables and JVS reference style. It also adds the two items Editorial Manager now asks you to confirm: a paragraph placing the study against current clinical practice guidelines, and the AI-use declaration before the References.
+3. The upload package: separate manuscript, abstract, table and legend files, 1200 dpi TIFF figures, the online supplement and a locked master copy.
+4. A draft visual abstract built from your last JVS PowerPoint, with the title and numbers taken from the manuscript.
+5. The JVS Application for Publication, filled from the journal's own form, with anything you have not confirmed highlighted.
+6. Answers for each Editorial Manager checklist item, pointing to where the manuscript supports it.
+7. A full audit. Every author's name, middle initial, degrees and affiliation are checked against a verified roster or a printed byline. Then every number, title and name in every file is checked against the final manuscript, and a fresh agent that has not seen the drafting repeats the check.
+
+**[Download jvsformat.zip](https://github.com/davidstonko/stonko-format/raw/main/jvsformat.zip)** &middot; **[Download format.zip](https://github.com/davidstonko/stonko-format/raw/main/format.zip)** &middot; [Source on GitHub](https://github.com/davidstonko/stonko-format)
+
+### How to use it
+
+1. Install both ZIP files (steps at the bottom of this page). /jvsformat needs /format, and uses JH Surgery Format for the letterhead if you have it.
+2. Start a chat, attach your manuscript and type `/jvsformat`.
+3. Answer its opening questions: the author list as it should print, the corresponding author, the article type, who signs the Application for Publication, each author's contributions and conflicts, and whether you used AI for analysis code or figures. It never fills these in for you.
+4. Review what comes back. Accept or reject the tracked changes, edit the visual abstract, and clear every yellow highlight before you upload.
+
+The title-page defaults, coauthor roster and correspondence address are mine; change the "Author details" and roster sections of the /format SKILL.md to use it yourself. The rules come from the JVS author instructions and Editorial Manager screens as of November 2026, so check the journal's current Guide for Authors before you submit.
+
 ## Skills by others
 
 These were not built by me. Each links to its authors' own page.
