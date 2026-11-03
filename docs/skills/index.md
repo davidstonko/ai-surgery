@@ -76,6 +76,20 @@ What it makes, in order:
 
 The title-page defaults, coauthor roster and correspondence address are mine; change the "Author details" and roster sections of the /format SKILL.md to use it yourself. The rules come from the JVS author instructions and Editorial Manager screens as of November 2026, so check the journal's current Guide for Authors before you submit.
 
+## Biosketch (/jhbiosketch)
+
+Drafts a biosketch tailored to a specific grant from your CV and the proposal. Give it both (at least the Specific Aims or the project summary); it picks the papers that fit the grant, writes the Personal Statement and Contributions to Science around the proposal, and builds the format the funder asks for. Everything traces to your CV or to something you told it: it will not invent papers, honors, numbers or roles, and it will not draft without your CV.
+
+What it makes:
+
+1. **NIH, NSF and DoD CDMRP:** paste-ready text for SciENcv, with the character counts and entry limits checked by a script. Since May 2026 NIH accepts only the biosketch PDF that SciENcv generates and you certify, so for NIH it drafts the text you paste in (plus a Word review copy if your grants office wants one).
+2. **Hopkins ICTR pilots, AHA and foundations** that still ask for the NIH-format biosketch: a Word file in the classic layout, checked against 5 pages.
+3. **The Data Science and AI Institute and other seed awards** that ask for a 2-page biosketch or CV: the same layout, checked against 2 pages.
+
+**[Download jhbiosketch.zip](https://github.com/davidstonko/jhbiosketch/raw/main/jhbiosketch.zip)** &middot; [Source on GitHub](https://github.com/davidstonko/jhbiosketch)
+
+Install it (steps at the bottom of this page), attach your CV and aims, and type `/jhbiosketch`. It builds on [skill-nih-biosketch](https://github.com/stephenturner/skill-nih-biosketch) by Stephen Turner. Funder rules change, so check the current call before you submit.
+
 ## Skills by others
 
 These were not built by me. Each links to its authors' own page.
