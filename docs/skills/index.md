@@ -61,7 +61,7 @@ What it makes, in order:
 2. A conformance pass on the manuscript as tracked changes: JVS word, figure, table and reference limits, title and abstract rules, Article Highlights and the Table of Contents Summary, Roman-numeral tables and JVS reference style. It also adds the two items Editorial Manager now asks you to confirm: a paragraph placing the study against current clinical practice guidelines, and the AI-use declaration before the References.
 3. The upload package: separate manuscript, abstract, table and legend files, 1200 dpi TIFF figures, the online supplement and a locked master copy.
 4. A draft visual abstract built from your last JVS PowerPoint, with the title and numbers taken from the manuscript.
-5. The JVS Application for Publication, filled from the journal's own form, with anything you have not confirmed highlighted.
+5. The JVS Application for Publication, filled from the journal's own form. Anything you have not confirmed is asked about, never guessed.
 6. Answers for each Editorial Manager checklist item, pointing to where the manuscript supports it.
 7. A full audit. Every author's name, middle initial, degrees and affiliation are checked against a verified roster or a printed byline. Then every number, title and name in every file is checked against the final manuscript, and a fresh agent that has not seen the drafting repeats the check.
 
@@ -72,7 +72,7 @@ What it makes, in order:
 1. Install both ZIP files (steps at the bottom of this page). /jvsformat needs /format, and uses JH Surgery Format for the letterhead if you have it.
 2. Start a chat, attach your manuscript and type `/jvsformat`.
 3. Answer its opening questions: the author list as it should print, the corresponding author, the article type, who signs the Application for Publication, each author's contributions and conflicts, and whether you used AI for analysis code or figures. It never fills these in for you.
-4. Review what comes back. Accept or reject the tracked changes, edit the visual abstract, and clear every yellow highlight before you upload.
+4. Review what comes back. The submission files are clean, with no highlighting, comments or placeholders; anything still open is listed in Claude's reply. Edit the visual abstract to taste before you upload.
 
 The title-page defaults, coauthor roster and correspondence address are mine; change the "Author details" and roster sections of the /format SKILL.md to use it yourself. The rules come from the JVS author instructions and Editorial Manager screens as of November 2026, so check the journal's current Guide for Authors before you submit.
 
