@@ -105,3 +105,12 @@ h1 { font-size: 36px; margin: 0 0 12px; }
 .fig-row figure{margin:0;flex:1 1 220px;max-width:300px}
 .fig-row img{width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:4px}
 .fig-row figcaption{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.45}
+
+.hero { margin: 0 0 8px; }
+.hero h1 { margin-bottom: 10px; }
+.hero .lede { max-width: 720px; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--accent); }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost:hover { background: var(--soft); }

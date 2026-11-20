@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
-{% assign og_title = page.title | default: site.title %}{% if page.url == '/' %}{% assign og_title = 'The Local Minimum' %}{% endif %}
+{% assign og_title = page.title | default: site.title %}{% if page.url == '/' %}{% assign og_title = 'David Stonko, MD, MS | The Local Minimum' %}{% endif %}
 <meta property="og:site_name" content="LocalMinimum.us">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:title" content="{{ og_title | escape }}">
@@ -25,7 +25,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://localminimum.us/#website","url":"https://localminimum.us/","name":"The Local Minimum","alternateName":"LocalMinimum.us","description":"A weekly email and resource library on AI in surgery and medicine by David Stonko, MD, MS.","author":{"@id":"https://localminimum.us/#david"}},
-{"@type":"Person","@id":"https://localminimum.us/#david","name":"David P. Stonko","honorificSuffix":"MD, MS","url":"https://localminimum.us/about/","jobTitle":"Vascular surgery and endovascular therapy fellow","affiliation":{"@type":"Hospital","name":"The Johns Hopkins Hospital"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Vanderbilt University School of Medicine"},{"@type":"CollegeOrUniversity","name":"University of Maryland, Baltimore County"}],"knowsAbout":["Vascular surgery","Aortic surgery","Carotid revascularization","Vascular trauma","Machine learning in surgery","Artificial intelligence in medicine"],"sameAs":["https://scholar.google.com/citations?user=615pt6cAAAAJ","https://www.linkedin.com/in/david-stonko-4960a878/","https://github.com/davidstonko","https://www.cataliocapital.com/team/david-stonko"]}
+{"@type":"Person","@id":"https://localminimum.us/#david","name":"David P. Stonko","honorificSuffix":"MD, MS","url":"https://localminimum.us/about/","jobTitle":"Vascular surgeon and applied mathematician; Clinical Fellow, Vascular Surgery and Endovascular Therapy","affiliation":{"@type":"Hospital","name":"The Johns Hopkins Hospital"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Vanderbilt University School of Medicine"},{"@type":"CollegeOrUniversity","name":"University of Maryland, Baltimore County"}],"knowsAbout":["Vascular surgery","Endovascular aortic repair","Carotid revascularization","Vascular trauma","Clinical machine learning","Artificial intelligence in medicine","Reinforcement learning","Anatomy-informed neural networks","Applied mathematics"],"sameAs":["https://scholar.google.com/citations?user=615pt6cAAAAJ","https://www.linkedin.com/in/david-stonko-4960a878/","https://github.com/davidstonko","https://www.cataliocapital.com/team/david-stonko"]}
 ]}
 </script>
 </head>
@@ -36,23 +36,25 @@
     <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/favicon.svg' | relative_url }}" width="28" height="28" alt="">LocalMinimum<span>.us</span></a>
     <nav aria-label="Main">
       <a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} class="on"{% endif %}>Home</a>
-      <div class="dd{% if page.nav == 'resources' or page.nav == 'skills' or page.nav == 'library' or page.layout == 'post' %} on{% endif %}">
-        <button type="button" class="dd-btn" aria-expanded="false" aria-haspopup="true">AI and Surgery Resources <span aria-hidden="true">&#9662;</span></button>
+      <a href="{{ '/about/' | relative_url }}"{% if page.nav == 'about' %} class="on"{% endif %}>About</a>
+      <div class="dd{% if page.nav == 'research' or page.nav == 'medtech' or page.nav == 'talks' %} on{% endif %}">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-haspopup="true">Work <span aria-hidden="true">&#9662;</span></button>
         <div class="dd-menu">
-          <a href="{{ '/resources/' | relative_url }}"{% if page.nav == 'resources' %} class="on"{% endif %}>Resources</a>
-          <a href="{{ '/skills/' | relative_url }}"{% if page.nav == 'skills' %} class="on"{% endif %}>Claude Skills</a>
-          <a href="{{ '/library/' | relative_url }}"{% if page.nav == 'library' or page.layout == 'post' %} class="on"{% endif %}>Library</a>
-        </div>
-      </div>
-      <div class="dd{% if page.nav == 'research' or page.nav == 'medtech' or page.nav == 'talks' or page.nav == 'about' %} on{% endif %}">
-        <button type="button" class="dd-btn" aria-expanded="false" aria-haspopup="true">David's Work <span aria-hidden="true">&#9662;</span></button>
-        <div class="dd-menu">
-          <a href="{{ '/research/' | relative_url }}"{% if page.nav == 'research' %} class="on"{% endif %}>Research</a>
-          <a href="{{ '/medtech/' | relative_url }}"{% if page.nav == 'medtech' %} class="on"{% endif %}>MedTech Work</a>
+          <a href="{{ '/research/' | relative_url }}"{% if page.nav == 'research' %} class="on"{% endif %}>Research and tools</a>
+          <a href="{{ '/medtech/' | relative_url }}"{% if page.nav == 'medtech' %} class="on"{% endif %}>MedTech</a>
           <a href="{{ '/talks/' | relative_url }}"{% if page.nav == 'talks' %} class="on"{% endif %}>Talks</a>
-          <a href="{{ '/about/' | relative_url }}"{% if page.nav == 'about' %} class="on"{% endif %}>About Me</a>
         </div>
       </div>
+      <div class="dd{% if page.nav == 'resources' or page.nav == 'skills' or page.nav == 'library' or page.layout == 'post' %} on{% endif %}">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-haspopup="true">Newsletter <span aria-hidden="true">&#9662;</span></button>
+        <div class="dd-menu">
+          <a href="{{ '/issues/' | relative_url }}">Past issues</a>
+          <a href="{{ '/library/' | relative_url }}"{% if page.nav == 'library' or page.layout == 'post' %} class="on"{% endif %}>Library</a>
+          <a href="{{ '/resources/' | relative_url }}"{% if page.nav == 'resources' %} class="on"{% endif %}>AI and surgery resources</a>
+          <a href="{{ '/skills/' | relative_url }}"{% if page.nav == 'skills' %} class="on"{% endif %}>Claude skills</a>
+        </div>
+      </div>
+      <a href="{{ '/assets/Stonko_CV.pdf' | relative_url }}">CV</a>
       <a href="{{ '/contact/' | relative_url }}"{% if page.nav == 'contact' %} class="on"{% endif %}>Contact</a>
       <a class="join" href="{{ '/subscribe/' | relative_url }}">Subscribe</a>
     </nav>
@@ -63,7 +65,7 @@
 </main>
 <footer class="wrap foot">
   <p>{{ site.title }} &middot; By David P. Stonko, MD, MS</p>
-  <p><a href="{{ '/subscribe/' | relative_url }}">Subscribe</a> &middot; <a href="{{ '/submit.html' | relative_url }}">Suggest an item</a> &middot; <a href="{{ '/contact/' | relative_url }}">Contact</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+  <p><a href="{{ '/about/' | relative_url }}">About</a> &middot; <a href="{{ '/assets/Stonko_CV.pdf' | relative_url }}">CV</a> &middot; <a href="{{ '/subscribe/' | relative_url }}">Subscribe</a> &middot; <a href="{{ '/submit.html' | relative_url }}">Suggest an item</a> &middot; <a href="{{ '/contact/' | relative_url }}">Contact</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
 </footer>
 <script>
 document.querySelectorAll('.dd-btn').forEach(function(b){b.addEventListener('click',function(e){var d=b.parentElement,o=!d.classList.contains('open');document.querySelectorAll('.dd.open').forEach(function(x){x.classList.remove('open');x.firstElementChild.setAttribute('aria-expanded','false')});if(o){d.classList.add('open');b.setAttribute('aria-expanded','true')}e.stopPropagation()})});

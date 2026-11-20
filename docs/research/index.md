@@ -7,7 +7,7 @@ head_title: "Research: Vascular Surgery and Machine Learning | David Stonko, MD,
 ---
 # Research and tools
 
-<p class="lede">Outcomes research and applied machine learning in vascular surgery, using large clinical databases and registries.</p>
+<p class="lede">The mathematical foundations for world models of vascular and endovascular surgery, clinical machine learning since 2011, and outcomes research in vascular surgery.</p>
 
 <div class="prose" markdown="1">
 
