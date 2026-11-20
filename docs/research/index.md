@@ -15,7 +15,7 @@ Publications are on [Google Scholar](https://scholar.google.com/citations?user=6
 
 <hr>
 
-## David's ML/AI Research
+## Machine learning and AI research
 
 ### Classical ML research work
 
